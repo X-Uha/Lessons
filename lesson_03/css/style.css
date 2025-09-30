@@ -1,0 +1,110 @@
+@import url("reset.css");  
+
+
+a{
+  color: red;  
+}
+
+.chapter{
+  color: aqua;
+}
+
+.text{
+  color: chocolate;
+}
+
+#section-03{
+  color: yellow;
+}
+
+[class*="er"]{
+  color: green;
+}
+
+[href*="ist"]{
+  color: orchid;
+}
+
+a.link-to-top{
+  color: slateblue;
+}
+
+div.copyright{
+  color: khaki;
+}
+
+h2#section-02.sub-title{
+  color: greenyellow;
+}
+
+div,
+.chapter,
+.sub-title,
+.list{
+  color: midnightblue;
+}
+
+div{
+  text-decoration-color: azure;
+}
+.chapter{
+  text-transform: lowercase;
+}
+.sub-title{
+  text-decoration-color: blanchedalmond ;
+}
+.list{
+  background-color: teal;
+}
+
+.navbar-light a{
+  color: darkorange;
+}
+
+.hero b{
+ color: gray; 
+ text-decoration: underline;
+}
+
+.travel-card .chapter{
+  color: firebrick;
+}
+
+.paper .sub-title{
+  color: aquamarine;
+}
+
+.list-arch .item{
+  color: plum;
+}
+
+.text *{
+  color: gold;
+}
+
+.chapter *{
+  color: royalblue;
+}
+
+.text > p {
+  color: indigo;}
+
+.chapter > a {
+  color: black;
+}
+
+.navbar-light ~ div {
+  color: hotpink;
+}
+
+.travel-card ~ a{
+  color: palegreen;
+}
+
+.image + div {
+  color: peru;
+}
+
+.chapter + p{
+  color: crimson;
+}
