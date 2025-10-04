@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "Fixel";
+    src: url("../fonts/Fixel-Regular.woff2") format(woff2);
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Fixel";
+    src: url("../fonts/Fixel-Medium.woff2") format(woff2);
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Fixel";
+    src: url("../fonts/Fixel-Bold.woff2") format(woff2);
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Fixel";
+    src: url("../fonts/Fixel-ExtraBold.woff2") format(woff2);
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Zvin";
+    src: url("../fonts/Zvin-Regular.woff2") format(woff2);
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Zvin";
+    src: url("../fonts/Zvin-Medium.woff2") format(woff2);
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Zvin";
+    src: url("../fonts/Zvin-SemiBold.woff2") format(woff2);
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
