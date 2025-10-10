@@ -1,0 +1,68 @@
+@import url(reset.css);
+@import url(fonts.css);
+
+body{
+  font-family: Lato, sans-serif;
+  line-height: 1.25;
+
+}.header { 
+  margin-bottom: 75px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1180px;
+}
+
+.header_title {
+  text-align: center;
+}
+
+
+.why_choose_title {
+  font-size: 32px;
+  font-weight: 800;
+  text-align: center;
+  color: #2f302c;
+  margin-bottom: 72px;
+}
+
+.cards_block {
+  font-size: 0;
+  margin-left: -34px;
+  margin-right: -34px;
+}
+
+.card_item {
+  display: inline-block;
+  width: 33.333%;
+  vertical-align: top;
+  text-align: center;
+  padding-left: 34px;
+  padding-right: 34px;
+  margin-bottom: 68px;
+}
+
+.card_image {
+  width: 55px;
+  height: 55px;
+  margin-bottom: 24px;
+}
+
+.card_title {
+  font-weight: 700;
+  color: #2f302c;
+  text-transform: uppercase;
+  margin-bottom: 24;
+}
+
+.card_description {
+  font-weight: 500;
+  color: 7e7f7c;
+}
+ 
+.footer-text{
+  font-size: 25px;
+  font-weight: 700;
+  text-align: center;
+}
