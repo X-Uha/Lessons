@@ -71,3 +71,137 @@ body {
     font-size: 18px;
     text-align: center;
 }
+
+
+.header__item {
+    text-decoration: underline;
+    text-align: justify;
+    color: #7e7f7ca9;
+    
+}
+
+.header__link {
+    padding: 55px;
+    color: #556b2f;
+}
+
+.title-main {
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 25px;
+    color: #808080c4;
+}
+
+.size {
+    margin-bottom: 20px;
+}
+
+.size__title {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #008000;
+    text-decoration: double;
+}
+
+.size__width-height {
+    margin: 0 auto 40px;
+    text-align: center;
+    width: 50%;
+    height: 400px;
+    background-color: hwb(160 50% 0%);
+}
+
+.size__minwidth-minheight {
+    margin: 0 auto 40px;
+    text-align: center;
+    min-width: 600px;
+    min-height: 200px;
+    border: #2f302c;
+    background-color: #008000;
+}
+
+.size__maxwidth-maxheight {
+    margin: 0 auto 40px;
+    text-align: center;
+    overflow-y: scroll;
+    max-width: 600px;
+    max-height: 100px;
+    background-color: #0000ff53;
+}
+
+image {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.image img {
+    margin-bottom: 25px;}
+
+.size__content-box {
+    margin: 0 auto 15px;
+    padding: 0 20px;
+    box-sizing: content-box;
+    text-align: center;
+    width: 400px;
+    height: 400px;
+    background-color: #ee82ee81;
+}
+
+.size__border-box {
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: center;
+    width: 400px;
+    height: 400px;
+    background-color: #ee82eee1;
+}
+
+.indent__title {
+    margin-bottom: 40px;
+    font-size: 30px;
+    text-decoration: double;
+    color: #00800091;
+}
+
+.indent__text {
+    font-size: 35px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #ff0000c0;
+}
+
+.indent__item1 {
+    margin: 0 auto 35px;
+    text-align: center;
+    width: 400px;
+    height: 400px;
+    background-color: #daa52057;
+}
+
+.indent__item2 {
+    margin: 0 auto 30px;
+    text-align: center;
+    width: 400px;
+    height: 400px;
+    background-color: #808080d3;
+}
+
+.indent__item3 {
+    margin: 0 auto 30px;
+    padding: 60px 0 0 20px;
+    text-align: center;
+    width: 400px;
+    height: 200px;
+    background-color: #892be2a1;
+}
+
+
+.footer {
+    text-align: center;
+}
+
+.footer-link {
+    padding: 20px;
+    color: #1e3a8a;
+}
