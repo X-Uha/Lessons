@@ -12,10 +12,12 @@ body {
     min-height: 612px;
     color: #2f302c;
     padding-top: 114px;
-    padding-bottom: 110px;}
+    padding-bottom: 110px;
+}
 
 .furniture__container {
-    max-width: 1390px;
+    max-width: 1392px;  
+    /* можна задати max-width: 1392+16+16=1424px, бо внутрішні відступи заберуть частину площі контейнера в контенту */
     margin: 0 auto;
     padding: 0 16px;
 }
@@ -23,6 +25,7 @@ body {
 
 .furniture__content {
     max-width: 650px;
+    /* можна вказати width: 50% (хоча це не зовсім точно); більшу max-width (наприклад, 700px) або width: 650px; max-width: 100% */
     margin-left: auto;
 }
 
