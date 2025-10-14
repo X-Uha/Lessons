@@ -49,7 +49,7 @@ body {
     background-color: #2f302c;
     margin-bottom: 36px;
 }
-
+/* лінію також можна зобразити через .hr-span {display: block; max-width: 308px; heigh: 1px; background: #2f302c;} aбо .hr {border: 0; height: 1px; background:#2f302c}  */
 .furniture__title-span {
     font-weight: 700;
 }
