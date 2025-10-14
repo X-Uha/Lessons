@@ -1,0 +1,120 @@
+@import url(reset.css);
+@import url(fonts.css); 
+
+body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.furniture {
+    background: #d4d4d4 url("../img/hero-banner.jpg") center / cover no-repeat;
+    min-height: 612px;
+    color: #2f302c;
+    padding-top: 114px;
+    padding-bottom: 110px;}
+
+.furniture__container {
+    max-width: 1390px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+/* для адаптивності можна використати значення padding: 0 clamp(10px, 1vw, 20px) та padding-inline і margin-inline, які автоматично враховують напрямок тексту*/
+
+.furniture__content {
+    max-width: 650px;
+    margin-left: auto;
+}
+
+.furniture__subtitle {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.furniture__title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 96px;
+    font-weight: 800;
+    line-height: 1.04;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.furniture__line {
+    max-width: 308px;
+    height: 1px;
+    background-color: #2f302c;
+    margin-bottom: 36px;
+}
+
+.furniture__title-span {
+    font-weight: 700;
+}
+
+.furniture__description {
+    max-width: 374px;
+    font-weight: 500;
+    line-height: 1.25;
+    color: #7e7f7c;
+}
+
+.plan__card {
+    margin-bottom: 60px;
+}
+
+.plan__title {
+    color: rgba(115, 115, 115, 1);
+    font-size: 24px;
+    font-weight: 500;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.plan__list {
+    margin: 0 auto;
+    max-width: 271px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.plan__item {
+    margin-bottom: 15px;
+    min-height: 32px;
+}
+
+.plan__link {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.71;
+    letter-spacing: .20000000298023224px;
+    color: #252b42;
+    padding-left: 42px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.green {
+    background: url("../img/green.svg") 0 0 / contain no-repeat;
+}
+
+.grey{
+    background: url("../img/grey.svg") 0 0 / contain no-repeat;
+}
+
+.plan__title {}
+
+.plan__card {}
+
+.plan__list {}
+
+.plan__item {}
+
+
+
