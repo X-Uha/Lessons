@@ -84,11 +84,6 @@ body {
 }
 
 .plan__item {
-    margin-bottom: 15px;
-    min-height: 32px;
-}
-
-.plan__link {
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
     font-weight: 600;
@@ -98,23 +93,17 @@ body {
     padding-left: 42px;
     padding-top: 4px;
     padding-bottom: 4px;
+    min-height: 32px;
+    margin-bottom: 15px;
 }
 
-.green {
+.plan__item--green {
     background: url("../img/green.svg") 0 0 / contain no-repeat;
 }
 
-.grey{
+.plan__item--grey{
     background: url("../img/grey.svg") 0 0 / contain no-repeat;
 }
-
-.plan__title {}
-
-.plan__card {}
-
-.plan__list {}
-
-.plan__item {}
 
 
 
