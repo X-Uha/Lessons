@@ -8,7 +8,7 @@ body {
 }
 
 .furniture {
-    background: #d4d4d4 url("../img/hero-banner.jpg") center / cover no-repeat;
+    background: #d4d4d4 url("../img/bg.jpg") center / cover no-repeat;
     min-height: 612px;
     color: #2f302c;
     padding-top: 114px;
