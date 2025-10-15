@@ -1,0 +1,32 @@
+@import url(reset.css);
+@import url(fonts.css); 
+
+.psevdo {
+    max-width: 351px;
+    margin-inline: auto;
+    padding: 16px 40px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.71;
+    letter-spacing: 0.2px;
+    color: #252B42;
+}
+
+.list>*:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.list {
+    padding-left: 42px;
+}
+
+.list-item::before {
+    vertical-align: middle;
+    content: "";
+    width: 32px;
+    height: 32px;
+    background: url("../img/green.svg") 0 0 / 32px no-repeat;
+    margin-right: 10px;
+    margin-left: -42px;
+}
