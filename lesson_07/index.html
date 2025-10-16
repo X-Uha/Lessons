@@ -1,27 +1,270 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head class="header">
+ <!DOCTYPE html>
+<html lang="uk">
+    <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap"
-            rel="stylesheet">
-
         <link rel="stylesheet" href="css/style-main.css">
+        <title>Lesson_7</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="head">
+                <div class="head__title">
+                    <h1>Псевдокласи та псевдоелементи в CSS</h1>
+                </div>
+                <div class="head__list">
+                    <ul class="head__items">
+                        <li class="head__item"><a
+                                href="#section-01">:hover</a></li>
+                        <li class="head__item"><a
+                                href="#section-02">:active</a></li>
+                        <li class="head__item"><a
+                                href="#section-03">:visited</a></li>
+                        <li class="head__item"><a
+                                href="#section-04">:focus,
+                                :focus-visible</a></li>
+                        <li class="head__item"><a
+                                href="#section-05">:target</a></li>
+                        <li class="head__item"><a
+                                href="#section-06">:first-child,
+                                :first-of-type</a></li>
+                        <li class="head__item"><a
+                                href="#section-07">:last-child,
+                                :last-of-type</a></li>
+                        <li class="head__item"><a
+                                href="#section-08">:nth-child,
+                                :nth-of-type</a></li>
+                        <li class="head__item"><a
+                                href="#section-09">:not</a></li>
+                        <li class="head__item"><a
+                                href="#section-10">:has</a></li>
+                        <li class="head__item"><a
+                                href="#section-11">::before,
+                                ::after</a></li>
+                        <li class="head__item"><a
+                                href="#section-12">::first-letter,
+                                ::first-line, ::selection</a></li>
+                        <li class="head__item"><a
+                                href="#section-13">Homework list</a></li> 
+                        <li class="head__item"><a
+                                href="experiments.html">Homework game</a></li>               
+                    </ul>
+                </div>
+            </header>
 
-        <title>Lesson 7</title>
+            <main class="info">
+                <div class="info__block" id="section-01">
+                    <h2>:hover</h2>
+                    <p>Псевдоклас <code>:hover</code> застосовується,
+                        коли користувач наводить курсор на елемент.</p>
+                    <div class="info__items">
+                        <a href="#"
+                            class="info__item info__item--hover">Наведи
+                            на мене</a>
+                        <a href="#"
+                            class="info__item info__item--hover">Наведи
+                            (з підкресленням)</a>
+                        <a href="#"
+                            class="info__item info__item--hover">Наведи
+                            (з масштабом)</a>
+                    </div>
+                </div>
 
-        <body>
-            <div class="psevdo">
-                <ul class="list">
-                    <li class="list-item">Unlimited product updates</li>
-                    <li class="list-item">Unlimited product</li>
-                    <li class="list-item">Unlimited product</li>
-                </ul>
-                <img src="img/green.svg" alt>
-            </div>
-        </body>
+                <div class="info__block" id="section-02">
+                    <h2>:active</h2>
+                    <p>Псевдоклас <code>:active</code> застосовується,
+                        коли елемент активний (наприклад, під час
+                        кліку).</p>
+                    <div class="info__items">
+                        <a href="#"
+                            class="info__item info__item--active">Клікни
+                            на
+                            мене</a>
+                        <a href="#"
+                            class="info__item info__item--active">Клікни
+                            на
+                            мене</a>
+                        <a href="#"
+                            class="info__item info__item--active">Клікни
+                            на
+                            мене</a>
+                    </div>
+                </div>
 
-    </html>
+                <div class="info__block" id="section-03">
+                    <h2>:visited</h2>
+                    <p>Псевдоклас <code>:visited</code> стилізує
+                        посилання, які користувач уже відвідував.</p>
+                    <div class="info__items">
+                        <a href="https://militarnyi.com/uk/"
+                            target="_blank"
+                            class="info__item info__item--visited">Відвідай</a>
+                        <a href="https://www.english-heritage.org.uk/"
+                            target="_blank"
+                            class="info__item info__item--visited">Відвідай</a>
+
+                        <a
+                            href="https://osvita.ua/languages/organization/7674/"
+                            target="_blank"
+                            class="info__item info__item--visited">Відвідай</a>
+                    </div>
+                </div>
+
+                <div class="info__block" id="section-04">
+                    <h2>:focus, :focus-visible</h2>
+                    <p>Псевдоклас <code>:focus</code> застосовується до
+                        елемента в стані фокусу, а
+                        <code>:focus-visible</code> — лише коли фокус
+                        видимий (наприклад, при навігації
+                        клавіатурою).</p>
+                    <div class="info__items">
+                        <input type="text"
+                            class="info__item info__item--focus"
+                            placeholder="Фокусни мене">
+                        <input type="text"
+                            class="info__item info__item--focus"
+                            placeholder="Фокусни (видимість)">
+                    </div>
+                </div>
+
+                <div class="info__block" id="section-05">
+                    <h2>:target</h2>
+                    <p>Псевдоклас <code>:target</code> застосовується до
+                        елемента, ідентифікатор якого відповідає хешу в
+                        URL.</p>
+                    <div class="info__items">
+                        <a href="#section-01"
+                            class="info__item info__item--target">:hover</a>
+                        <a href="#section-02"
+                            class="info__item info__item--target">:active</a>
+                        <a href="#section-03"
+                            class="info__item info__item--target">:visited</a>
+                    </div>
+                </div>
+
+                <div class="info__block" id="section-06">
+                    <h2>:first-child, :first-of-type</h2>
+                    <p><code>:first-child</code> стилізує перший
+                        дочірній елемент, а <code>:first-of-type</code>
+                        — перший елемент певного типу.</p>
+                    <div class="info__items info__item--first-child">
+                        <a href="#" class="info__item">Перший child</a>
+                        <p class="info__item">Перший type</p>
+                        <a href="#" class="info__item">Другий child</a>
+                        <p class="info__item">Другий type</p>
+                    </div>
+                </div>
+
+                <div class="info__block" id="section-07">
+                    <h2>:last-child, :last-of-type</h2>
+                    <p><code>:last-child</code> стилізує останній
+                        дочірній елемент, а <code>:last-of-type</code> —
+                        останній елемент певного типу.</p>
+                    <div class="info__items info__item--last-child">
+                        <a href="#" class="info__item">Перший child</a>
+                        <p class="info__item">Перший type</p>
+                        <a href="#" class="info__item">Другий child</a>
+                        <p class="info__item">Останній type</p>
+                        <a href="#" class="info__item">Останній
+                            child</a>
+                    </div>
+                </div>
+
+                <div class="info__block" id="section-08">
+                    <h2>:nth-child, :nth-of-type</h2>
+                    <p><code>:nth-child</code> і
+                        <code>:nth-of-type</code> стилізують елементи за
+                        їх порядковим номером або типом.</p>
+                    <div class="info__items info__item--nth-child">
+                        <a href="#" class="info__item">Child 1</a>
+                        <p class="info__item">Type 1</p>
+                        <a href="#" class="info__item">Child 2</a>
+                        <p class="info__item">Type 2</p>
+                        <p class="info__item">Type 3</p>
+                    </div>
+                </div>
+
+                <div class="info__block" id="section-09">
+                    <h2>:not</h2>
+                    <p>Псевдоклас <code>:not</code> стилізує елементи,
+                        які не відповідають указаному селектору.</p>
+                    <div class="info__items info__item--not">
+                        <a href="#" class="info__item has">Елемент із
+                            класом has</a>
+                        <a href="#" class="info__item not">Елемент із
+                            класом not</a>
+                        <a href="#" class="info__item has">Елемент із
+                            класом has</a>
+                    </div>
+                </div>
+
+                <div class="info__block" id="section-10">
+                    <h2>:has</h2>
+                    <p>Псевдоклас <code>:has</code> стилізує елемент,
+                        якщо він містить указаний дочірній елемент.</p>
+                    <div class="info__items info__item--has">
+                        <a href="#" class="info__item has">Елемент із
+                            класом has</a>
+                        <a href="#" class="info__item not">Елемент із
+                            класом not</a>
+                        <a href="#" class="info__item has">Елемент із
+                            класом has</a>
+                    </div>
+                </div>
+
+                <div class="info__block" id="section-11">
+                    <h2>::before, ::after</h2>
+                    <p>Псевдоелементи <code>::before</code> і
+                        <code>::after</code> додають вміст перед або
+                        після елемента.</p>
+                    <div class="info__items info__item--ba">
+                        <a href="#" class="info__item has">Елемент із
+                            ::before</a>
+                        <a href="#" class="info__item not">Елемент без
+                            псевдоелементів</a>
+                        <a href="#" class="info__item has">Елемент із
+                            ::after</a>
+                    </div>
+                </div>
+
+                <div class="info__block" id="section-12">
+                    <h2>::first-letter, ::first-line, ::selection</h2>
+                    <p><code>::first-letter</code> стилізує першу
+                        літеру, <code>::first-line</code> — перший
+                        рядок, <code>::selection</code> — виділений
+                        текст.</p>
+                    <div class="info__items info__item--text">
+                        <p class="info__item first-letter">Цей текст
+                            демонструє ::first-letter.</p>
+                        <p class="info__item first-line">Цей текст
+                            демонструє ::first-line.</p>
+                        </p>
+                        <p class="info__item selection">Виділи цей текст
+                            для ::selection.</p>
+                    </div>
+                </div>
+
+                <div class="list__container" id="section-13" >
+                    <ul class="list">
+                        <li class="list-item">Unlimited product updates
+                        </li>
+                        <li class="list-item">Unlimited
+                            product</li>
+                        <li class="list-item">Unlimited product</li>
+                    </ul>
+                </div>
+            </main>
+
+            <footer class="footer__info">
+                <p>&copy; 2025 Псевдокласи та псевдоелементи</p>
+                <nav class="footer__nav">
+                    <a href="#top" class="footer__link">Вгору ⬆</a>
+                    <a href="experiments.html"
+                        class="footer__link">Грати в гру
+                        🎮</a>
+                </nav>
+            </footer>
+        </div>
+
+    </body>
+</html>
