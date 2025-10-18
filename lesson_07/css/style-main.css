@@ -241,9 +241,19 @@ body {
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
     font-weight: 600;
-    line-height: 1.71;
-    letter-spacing: 0.2px;
+    line-height: 2.285; 
+    /* по макету line-height: 1.71; змінюю її на 32/14=2.285, щоб при додаванні тексту в кожен підпункт списку відступ між першим і другим рядком були такого ж розміру, як наступні. Ще цього можна досягти, загорнувши текст кожного пункту списку в <p></p> і вказати для p
+    p {
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            margin-top: -30px;
+        } 
+    */
     color: #252B42;
+    letter-spacing: 0.2px;
 }
 
 .list>*:not(:last-child) {
@@ -255,15 +265,14 @@ body {
 }
 
 .list-item::before {
-    vertical-align: middle;
     content: "";
+    vertical-align: middle;
     width: 32px;
     height: 32px;
-    background: url("../img/green.svg") 0 0 / 32px no-repeat;
+    background: url("../img/green.svg") center;
     margin-right: 10px;
     margin-left: -42px;
 }
-
 
 .footer__info {
     background-color: #2c3e50;
