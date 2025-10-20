@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0">
+		<title>Lesson 8</title>
+		<link
+			href="css/style-main.css"
+			rel="stylesheet">
+	</head>
+
+	<body>
+		<header class="header">
+			<div class="header__container">
+				<div class="header__logo">
+					<img
+						class="logo"
+						src="img/logo.svg"
+						alt="Shanti logo">
+					<span>
+						- Icon, vector, сontent, SVG
+					</span>
+				</div>
+			</div>
+		</header>
+
+		<main class="main">
+
+			<div class="content">
+				<div class="content__container">
+					<div class="content__wrapper content__decor">
+						<div class="content__wrapper-text">
+							<p>
+								Decor element, raster PNG ~ AVIF
+							</p>
+						</div>
+					</div>
+					<div class="content__wrapper content__wrapper-photo">
+						<div class="content__wrapper-text">
+							<p>
+								Content: bitmap → JPG 1x, 2x, 3x | AVIF 1x, 2x, 3x | WEBP 1x, 2x, 3x
+							</p>
+						</div>
+						<div class="content__wrapper-block">
+							<picture>
+								<source
+									srcset="
+									img/yoga-1-1x.avif 1x, 
+									img/yoga-1-2x.avif 2x, 
+									img/yoga-1-3x.avif 3x
+								"
+									type="image/avif">
+								<source
+									srcset="
+									img/yoga-1-1x.webp 1x, 
+									img/yoga-1-2x.webp 2x, 
+									img/yoga-1-3x.webp 3x
+								"
+									type="image/webp">
+								<source
+									srcset="
+									img/yoga-1-1x.jpg 1x, 
+									img/yoga-1-2x.jpg 2x, 
+									img/yoga-1-3x.jpg 3x
+								"
+									type="image/jpeg">
+								<img
+									class="content__wrapper-img content__wrapper-img--backbend-pose"
+									src="img/yoga-1-1x.jpg"
+									alt="Woman practicing yoga in a backbend pose in a bright studio">
+							</picture>
+						</div>
+					</div>
+					<div class="content__wrapper content__wrapper-photo">
+						<div class="content__wrapper-text">
+							<p>
+								Content: bitmap → JPG 1x, 2x, 3x | AVIF 1x, 2x, 3x | WEBP 1x, 2x, 3x
+							</p>
+						</div>
+						<div class="content__wrapper-block">
+							<picture>
+								<source
+									srcset="
+									img/yoga-2-1x.avif 1x, 
+									img/yoga-2-2x.avif 2x, 
+									img/yoga-2-3x.avif 3x
+								"
+									type="image/avif">
+								<source
+									srcset="
+									img/yoga-2-1x.webp 1x, 
+									img/yoga-2-2x.webp 2x, 
+									img/yoga-2-3x.webp 3x
+								"
+									type="image/webp">
+								<source
+									srcset="
+									img/yoga-2-1x.jpg 1x, 
+									img/yoga-2-2x.jpg 2x, 
+									img/yoga-2-3x.jpg 3x
+								"
+									type="jpeg/webp">
+								<img
+									class="content__wrapper-img content__wrapper-img content__wrapper-img--meditation"
+									src="img/yoga-2-1x.jpg"
+									alt="Woman meditating in lotus pose during a yoga session">
+							</picture>
+						</div>
+					</div>
+					<div class="content__wrapper content__wrapper-photo">
+						<div class="content__wrapper-text">
+							<p>
+								Content: bitmap → JPG | AVIF | WEBP
+							</p>
+						</div>
+						<ul class="content__wrapper-list content__wrapper-block">
+							<li class="content__wrapper-item">
+								<picture>
+									<source
+										srcset="img/yoga_lessons-1-1x.avif"
+										type="image/avif">
+									<source
+										srcset="img/yoga_lessons-1-1x.webp"
+										type="image/webp">
+									<img
+										class="content__wrapper-img content__wrapper-img--stretch"
+										src="img/yoga_lessons-1-1x.jpg"
+										alt="Woman performing a side stretch during a yoga practice">
+								</picture>
+							</li>
+							<li class="content__wrapper-item">
+								<picture>
+									<source
+										srcset="img/yoga_lessons-2-2x.avif 2x, img/yoga_lessons-2-3x.avif 3x"
+										type="image/avif">
+									<source
+										srcset="img/yoga_lessons-2-2x.webp 2x, img/yoga_lessons-2-3x.webp 3x"
+										type="image/webp">
+									<img
+										class="content__wrapper-img content__wrapper-img--lunge-pose"
+										src="img/yoga_lessons-2-1x.jpg"
+										alt="Woman performing a high lunge yoga pose, stretching her arms upward in a bright studio">
+								</picture>
+							</li>
+							<li class="content__wrapper-item">
+								<picture>
+									<source
+										srcset="img/yoga_lessons-3-2x.avif 2x, img/yoga_lessons-3-3x.avif 3x"
+										type="image/avif">
+									<source
+										srcset="img/yoga_lessons-3-2x.webp 2x, img/yoga_lessons-3-2x.webp 3x"
+										type="image/webp">
+									<img
+										class="content__wrapper-img content__wrapper-img--backbend"
+										src="img/yoga_lessons-3-1x.jpg"
+										alt="Woman in a low lunge backbend pose under a beam of light during a yoga session">
+								</picture>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		</main>
+
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__copy">
+					<p>
+						Copyright 2025, WEB GRAPHICS
+					</p>
+				</div>
+			</div>
+		</footer>
+
+	</body>
