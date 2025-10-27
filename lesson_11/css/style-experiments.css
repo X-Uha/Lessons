@@ -7,13 +7,19 @@ body {
     font-weight: 400;
     background: #0f0f18;
     margin: 0;
+    /* Уникнення дефолтних полів */
+    min-height: 100vh;
+    /* Забезпечення повної висоти для .wrapper */
 }
 
 .wrapper {
     position: relative;
     min-height: 100%;
+    /* Висота відносно body (100vh) */
     overflow: clip;
+    /* Обмеження переповнення */
     padding-bottom: 60px;
+    /* Простір для футера */
 }
 
 .page [class*="__container"] {
@@ -21,6 +27,7 @@ body {
     margin-inline: auto;
     padding-inline: 15px;
 }
+
 
 .page__main {
     position: relative;
@@ -51,39 +58,248 @@ body {
     box-shadow: 0 0 6px 2px rgba(255, 255, 255, 0.8),
         0 0 12px 4px rgba(255, 255, 255, 0.4);
     animation: twinkle 3s infinite alternate;
+    /* Анімація миготіння */
 }
 
-/* Стилі для зірок */
-.sky__star--1 { top: 5%; left: 5%; width: 10px; height: 10px; transform: rotate(15deg); }
-.sky__star--2 { top: 31%; left: 73%; width: 5px; height: 5px; transform: rotate(45deg); }
-.sky__star--3 { top: 3%; left: 18%; width: 7px; height: 7px; transform: rotate(75deg); }
-.sky__star--4 { top: 8%; left: 45%; width: 7px; height: 7px; transform: rotate(105deg); }
-.sky__star--5 { top: 2%; left: 95%; width: 7px; height: 7px; transform: rotate(135deg); }
-.sky__star--6 { top: 11%; left: 75%; width: 7px; height: 7px; transform: rotate(165deg); }
-.sky__star--7 { top: 21%; left: 61%; width: 5px; height: 5px; transform: rotate(195deg); }
-.sky__star--8 { top: 28%; left: 44%; width: 6px; height: 6px; transform: rotate(225deg); }
-.sky__star--9 { top: 14%; left: 25%; width: 6px; height: 6px; transform: rotate(255deg); }
-.sky__star--10 { top: 24%; left: 14%; width: 3px; height: 3px; transform: rotate(285deg); }
-.sky__star--11 { top: 41%; left: 78%; width: 3px; height: 3px; transform: rotate(315deg); }
-.sky__star--12 { top: 29%; left: 88%; width: 7px; height: 7px; transform: rotate(345deg); }
-.sky__star--13 { top: 39%; left: 38%; width: 7px; height: 7px; transform: rotate(30deg); }
-.sky__star--14 { top: 39%; left: 11%; width: 7px; height: 7px; transform: rotate(60deg); }
-.sky__star--15 { top: 49%; left: 63%; width: 4px; height: 4px; transform: rotate(90deg); }
-.sky__star--16 { top: 39%; left: 55%; width: 3px; height: 3px; transform: rotate(120deg); }
-.sky__star--17 { top: 14%; left: 88%; width: 3px; height: 3px; transform: rotate(150deg); }
-.sky__star--18 { top: 24%; left: 28%; width: 7px; height: 7px; transform: rotate(180deg); }
-.sky__star--19 { top: 1.5%; left: 58%; width: 2px; height: 2px; transform: rotate(210deg); }
-.sky__star--20 { top: 19%; left: 7%; width: 2px; height: 2px; transform: rotate(240deg); }
-.sky__star--21 { top: 49%; left: 7%; width: 2px; height: 2px; transform: rotate(270deg); }
-.sky__star--22 { top: 49%; left: 26%; width: 2px; height: 2px; transform: rotate(300deg); }
-.sky__star--23 { top: 59%; left: 81%; width: 2px; height: 2px; transform: rotate(330deg); }
-.sky__star--24 { top: 59%; left: 51%; width: 2px; height: 2px; transform: rotate(0deg); }
-.sky__star--25 { top: 65%; left: 21%; width: 3px; height: 3px; transform: rotate(20deg); }
-.sky__star--26 { top: 48%; left: 91%; width: 5px; height: 5px; transform: rotate(50deg); }
-.sky__star--27 { top: 60%; left: 3%; width: 5px; height: 5px; transform: rotate(80deg); }
-.sky__star--28 { top: 65%; left: 93%; width: 4px; height: 4px; transform: rotate(110deg); }
-.sky__star--29 { top: 70%; left: 8%; width: 4px; height: 4px; transform: rotate(140deg); }
-.sky__star--30 { top: 68%; left: 79%; width: 6px; height: 6px; transform: rotate(170deg); }
+.sky__star--1 {
+    top: 5%;
+    left: 5%;
+    width: 10px;
+    height: 10px;
+    transform: rotate(15deg);
+}
+
+.sky__star--2 {
+    top: 31%;
+    left: 73%;
+    width: 5px;
+    height: 5px;
+    transform: rotate(45deg);
+}
+
+.sky__star--3 {
+    top: 3%;
+    left: 18%;
+    width: 7px;
+    height: 7px;
+    transform: rotate(75deg);
+}
+
+.sky__star--4 {
+    top: 8%;
+    left: 45%;
+    width: 7px;
+    height: 7px;
+    transform: rotate(105deg);
+}
+
+.sky__star--5 {
+    top: 2%;
+    left: 95%;
+    width: 7px;
+    height: 7px;
+    transform: rotate(135deg);
+}
+
+.sky__star--6 {
+    top: 11%;
+    left: 75%;
+    width: 7px;
+    height: 7px;
+    transform: rotate(165deg);
+}
+
+.sky__star--7 {
+    top: 21%;
+    left: 61%;
+    width: 5px;
+    height: 5px;
+    transform: rotate(195deg);
+}
+
+.sky__star--8 {
+    top: 28%;
+    left: 44%;
+    width: 6px;
+    height: 6px;
+    transform: rotate(225deg);
+}
+
+.sky__star--9 {
+    top: 14%;
+    left: 25%;
+    width: 6px;
+    height: 6px;
+    transform: rotate(255deg);
+}
+
+.sky__star--10 {
+    top: 24%;
+    left: 14%;
+    width: 3px;
+    height: 3px;
+    transform: rotate(285deg);
+}
+
+.sky__star--11 {
+    top: 41%;
+    left: 78%;
+    width: 3px;
+    height: 3px;
+    transform: rotate(315deg);
+}
+
+.sky__star--12 {
+    top: 29%;
+    left: 88%;
+    width: 7px;
+    height: 7px;
+    transform: rotate(345deg);
+}
+
+.sky__star--13 {
+    top: 39%;
+    left: 38%;
+    width: 7px;
+    height: 7px;
+    transform: rotate(30deg);
+}
+
+.sky__star--14 {
+    top: 39%;
+    left: 11%;
+    width: 7px;
+    height: 7px;
+    transform: rotate(60deg);
+}
+
+.sky__star--15 {
+    top: 49%;
+    left: 63%;
+    width: 4px;
+    height: 4px;
+    transform: rotate(90deg);
+}
+
+.sky__star--16 {
+    top: 39%;
+    left: 55%;
+    width: 3px;
+    height: 3px;
+    transform: rotate(120deg);
+}
+
+.sky__star--17 {
+    top: 14%;
+    left: 88%;
+    width: 3px;
+    height: 3px;
+    transform: rotate(150deg);
+}
+
+.sky__star--18 {
+    top: 24%;
+    left: 28%;
+    width: 7px;
+    height: 7px;
+    transform: rotate(180deg);
+}
+
+.sky__star--19 {
+    top: 1.5%;
+    left: 58%;
+    width: 2px;
+    height: 2px;
+    transform: rotate(210deg);
+}
+
+.sky__star--20 {
+    top: 19%;
+    left: 7%;
+    width: 2px;
+    height: 2px;
+    transform: rotate(240deg);
+}
+
+.sky__star--21 {
+    top: 49%;
+    left: 7%;
+    width: 2px;
+    height: 2px;
+    transform: rotate(270deg);
+}
+
+.sky__star--22 {
+    top: 49%;
+    left: 26%;
+    width: 2px;
+    height: 2px;
+    transform: rotate(300deg);
+}
+
+.sky__star--23 {
+    top: 59%;
+    left: 81%;
+    width: 2px;
+    height: 2px;
+    transform: rotate(330deg);
+}
+
+.sky__star--24 {
+    top: 59%;
+    left: 51%;
+    width: 2px;
+    height: 2px;
+    transform: rotate(0deg);
+}
+
+.sky__star--25 {
+    top: 65%;
+    left: 21%;
+    width: 3px;
+    height: 3px;
+    transform: rotate(20deg);
+}
+
+.sky__star--26 {
+    top: 48%;
+    left: 91%;
+    width: 5px;
+    height: 5px;
+    transform: rotate(50deg);
+}
+
+.sky__star--27 {
+    top: 60%;
+    left: 3%;
+    width: 5px;
+    height: 5px;
+    transform: rotate(80deg);
+}
+
+.sky__star--28 {
+    top: 65%;
+    left: 93%;
+    width: 4px;
+    height: 4px;
+    transform: rotate(110deg);
+}
+
+.sky__star--29 {
+    top: 70%;
+    left: 8%;
+    width: 4px;
+    height: 4px;
+    transform: rotate(140deg);
+}
+
+.sky__star--30 {
+    top: 68%;
+    left: 79%;
+    width: 6px;
+    height: 6px;
+    transform: rotate(170deg);
+}
 
 .sky__cloud-list {
     position: absolute;
@@ -96,6 +312,30 @@ body {
     margin: 0;
 }
 
+.sky__cloud-list:nth-child(1) {
+    bottom: -1%;
+    left: 0;
+    z-index: 51;
+}
+
+.sky__cloud-list:nth-child(2) {
+    bottom: 5%;
+    left: -5%;
+    z-index: 3;
+}
+
+.sky__cloud-list:nth-child(3) {
+    bottom: 13%;
+    left: -10%;
+    z-index: 2;
+}
+
+.sky__cloud-list:nth-child(4) {
+    bottom: 15%;
+    left: 10%;
+    z-index: 1;
+}
+
 .sky__cloud-item .sky__cloud-circle {
     position: absolute;
     background: radial-gradient(circle at 40% 40%, #b9b8cc, #a3bffa 60%, #839ed9 80%, transparent 90%);
@@ -104,51 +344,164 @@ body {
     animation: cloudMove 20s linear infinite;
 }
 
-.sky__cloud-item:nth-child(1) .sky__cloud-circle { bottom: -5px; left: -10px; }
-.sky__cloud-item:nth-child(2) .sky__cloud-circle { bottom: -15px; left: 20px; width: 130px; height: 130px; }
-.sky__cloud-item:nth-child(3) .sky__cloud-circle { bottom: -20px; left: 115px; width: 100px; height: 100px; }
-.sky__cloud-item:nth-child(4) .sky__cloud-circle { bottom: -20px; left: 180px; width: 130px; height: 130px; }
-.sky__cloud-item:nth-child(5) .sky__cloud-circle { bottom: -30px; left: 250px; width: 230px; height: 230px; }
-.sky__cloud-item:nth-child(5) .sky__cloud-circle--light { bottom: -30px; left: 250px; width: 250px; height: 250px; background: radial-gradient(circle at 40% 40%, #d5d4e7, #b9b8cc 60%, #a3bffa 80%, transparent 90%); }
-.sky__cloud-item:nth-child(6) .sky__cloud-circle { bottom: -50px; left: 370px; width: 200px; height: 200px; }
-.sky__cloud-item:nth-child(6) .sky__cloud-circle--light { bottom: -50px; left: 390px; width: 180px; height: 180px; background: radial-gradient(circle at 40% 40%, #d5d4e7, #b9b8cc 60%, #a3bffa 80%, transparent 90%); }
-.sky__cloud-item:nth-child(6) .sky__cloud-circle--dark-purple { bottom: -50px; left: 420px; width: 200px; height: 200px; background: radial-gradient(circle at 40% 40%, #656479, #4a4a6a 60%, #2e2e44 80%, transparent 90%); }
-.sky__cloud-item:nth-child(7) .sky__cloud-circle { bottom: -50px; left: 530px; width: 100px; height: 100px; }
-.sky__cloud-item:nth-child(8) .sky__cloud-circle { bottom: -50px; left: 600px; width: 130px; height: 130px; }
-.sky__cloud-item:nth-child(8) .sky__cloud-circle--dark { bottom: -50px; left: 560px; width: 130px; height: 130px; background: radial-gradient(circle at 40% 40%, #4a4a6a, #2e2e44 60%, #1a1a2e 80%, transparent 90%); }
-.sky__cloud-item:nth-child(8) .sky__cloud-circle--dark-purple { bottom: -50px; left: 580px; width: 130px; height: 130px; background: radial-gradient(circle at 40% 40%, #656479, #4a4a6a 60%, #2e2e44 80%, transparent 90%); }
-.sky__cloud-item:nth-child(9) .sky__cloud-circle { bottom: -50px; left: 670px; width: 180px; height: 180px; }
-.sky__cloud-item:nth-child(10) .sky__cloud-circle--light { bottom: 95px; left: 170px; width: 20px; height: 20px; z-index: 3; background: radial-gradient(circle at 40% 40%, #d5d4e7, #b9b8cc 60%, #a3bffa 80%, transparent 90%); }
-.sky__cloud-item:nth-child(11) .sky__cloud-circle--light { bottom: 135px; left: 230px; width: 10px; height: 10px; z-index: 3; background: radial-gradient(circle at 40% 40%, #d5d4e7, #b9b8cc 60%, #a3bffa 80%, transparent 90%); }
-.sky__cloud-item:nth-child(12) .sky__cloud-circle--light { bottom: 115px; left: 560px; width: 35px; height: 35px; z-index: 3; background: radial-gradient(circle at 40% 40%, #d5d4e7, #b9b8cc 60%, #a3bffa 80%, transparent 90%); }
+.sky__cloud-item:nth-child(1) .sky__cloud-circle {
+    bottom: -5px;
+    left: -10px;
+}
+
+.sky__cloud-item:nth-child(2) .sky__cloud-circle {
+    bottom: -15px;
+    left: 20px;
+    width: 130px;
+    height: 130px;
+}
+
+.sky__cloud-item:nth-child(3) .sky__cloud-circle {
+    bottom: -20px;
+    left: 115px;
+    width: 100px;
+    height: 100px;
+}
+
+.sky__cloud-item:nth-child(4) .sky__cloud-circle {
+    bottom: -20px;
+    left: 180px;
+    width: 130px;
+    height: 130px;
+}
+
+.sky__cloud-item:nth-child(5) .sky__cloud-circle {
+    bottom: -30px;
+    left: 250px;
+    width: 230px;
+    height: 230px;
+}
+
+.sky__cloud-item:nth-child(5) .sky__cloud-circle--light {
+    bottom: -30px;
+    left: 250px;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle at 40% 40%, #d5d4e7, #b9b8cc 60%, #a3bffa 80%, transparent 90%);
+}
+
+.sky__cloud-item:nth-child(6) .sky__cloud-circle {
+    bottom: -50px;
+    left: 370px;
+    width: 200px;
+    height: 200px;
+}
+
+.sky__cloud-item:nth-child(6) .sky__cloud-circle--light {
+    bottom: -50px;
+    left: 390px;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle at 40% 40%, #d5d4e7, #b9b8cc 60%, #a3bffa 80%, transparent 90%);
+}
+
+.sky__cloud-item:nth-child(6) .sky__cloud-circle--dark-purple {
+    bottom: -50px;
+    left: 420px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle at 40% 40%, #656479, #4a4a6a 60%, #2e2e44 80%, transparent 90%);
+}
+
+.sky__cloud-item:nth-child(7) .sky__cloud-circle {
+    bottom: -50px;
+    left: 530px;
+    width: 100px;
+    height: 100px;
+}
+
+.sky__cloud-item:nth-child(8) .sky__cloud-circle {
+    bottom: -50px;
+    left: 600px;
+    width: 130px;
+    height: 130px;
+}
+
+.sky__cloud-item:nth-child(8) .sky__cloud-circle--dark {
+    bottom: -50px;
+    left: 560px;
+    width: 130px;
+    height: 130px;
+    background: radial-gradient(circle at 40% 40%, #4a4a6a, #2e2e44 60%, #1a1a2e 80%, transparent 90%);
+}
+
+.sky__cloud-item:nth-child(8) .sky__cloud-circle--dark-purple {
+    bottom: -50px;
+    left: 580px;
+    width: 130px;
+    height: 130px;
+    background: radial-gradient(circle at 40% 40%, #656479, #4a4a6a 60%, #2e2e44 80%, transparent 90%);
+}
+
+.sky__cloud-item:nth-child(9) .sky__cloud-circle {
+    bottom: -50px;
+    left: 670px;
+    width: 180px;
+    height: 180px;
+}
+
+.sky__cloud-item:nth-child(10) .sky__cloud-circle--light {
+    bottom: 95px;
+    left: 170px;
+    width: 20px;
+    height: 20px;
+    z-index: 3;
+    background: radial-gradient(circle at 40% 40%, #d5d4e7, #b9b8cc 60%, #a3bffa 80%, transparent 90%);
+}
+
+.sky__cloud-item:nth-child(11) .sky__cloud-circle--light {
+    bottom: 135px;
+    left: 230px;
+    width: 10px;
+    height: 10px;
+    z-index: 3;
+    background: radial-gradient(circle at 40% 40%, #d5d4e7, #b9b8cc 60%, #a3bffa 80%, transparent 90%);
+}
+
+.sky__cloud-item:nth-child(12) .sky__cloud-circle--light {
+    bottom: 115px;
+    left: 560px;
+    width: 35px;
+    height: 35px;
+    z-index: 3;
+    background: radial-gradient(circle at 40% 40%, #d5d4e7, #b9b8cc 60%, #a3bffa 80%, transparent 90%);
+}
 
 @keyframes twinkle {
-    0% { opacity: 0.3; }
-    50% { opacity: 1; }
-    100% { opacity: 0.3; }
+    0% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
 }
 
 @keyframes cloudMove {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-200px); }
-}
+    0% {
+        transform: translateX(0);
+    }
 
-.plane-section {
-    position: relative;
-    margin: 20px auto;
-    width: 1100px;
-    height: 310px;
-    z-index: 1;
-    overflow: visible;
+    100% {
+        transform: translateX(-200px);
+    }
 }
 
 .plane-section__plane {
     width: 1100px;
     height: 310px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    animation: flightSequence 25s ease-in-out infinite;
+    margin: 20px auto 180px;
+    position: relative;
+    z-index: 1;
 }
 
 .plane__ver-stab {
@@ -504,70 +857,17 @@ body {
 }
 
 @keyframes stripeMove {
-    0% { background-position: 0 0; }
-    100% { background-position: -20px 0; }
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -20px 0;
+    }
 }
 
 .footer__text {
     position: relative;
     z-index: 2;
     text-align: center;
-}
-
-@keyframes flightSequence {
-    /* Наближення з паузою: 0-24% (6 секунд, включаючи 1 секунду паузи) */
-    0% {
-        transform: translateX(-700px) translateY(0) scale(0.5);
-        opacity: 1;
-    }
-    20% {
-        transform: translateX(70px) translateY(0) scale(1);
-        opacity: 1;
-    }
-    24% {
-        transform: translateX(100px) translateY(0) scale(1);
-        opacity: 1;
-    }
-    /* Маятникове розгойдування: 24-44% (5 секунд) */
-    29% {
-        transform: translateX(100px) translateY(0) scale(1) rotateZ(20deg);
-    }
-    34% {
-        transform: translateX(100px) translateY(0) scale(1) rotateZ(-20deg);
-    }
-    39% {
-        transform: translateX(100px) translateY(0) scale(1) rotateZ(20deg);
-    }
-    44% {
-        transform: translateX(100px) translateY(0) scale(1) rotateZ(0deg);
-    }
-    /* Мертва петля: 44-64% (5 секунд) */
-    49% {
-        transform: translateX(80px) translateY(-80px) scale(1) rotateZ(90deg);
-    }
-    54% {
-        transform: translateX(80px) translateY(0) scale(1) rotateZ(180deg);
-    }
-    59% {
-        transform: translateX(80px) translateY(80px) scale(1) rotateZ(270deg);
-    }
-    64% {
-        transform: translateX(80px) translateY(0) scale(1) rotateZ(360deg);
-    }
-    /* Поворот ліворуч: 64-84% (5 секунд) */
-    74% {
-        transform: translateX(150px) translateY(50px) scale(1) rotateZ(-45deg);
-    }
-    84% {
-        transform: translateX(100px) translateY(0) scale(1) rotateZ(0deg);
-    }
-    /* Відліт за край: 84-100% (4 секунди) */
-    92% {
-        transform: translateX(750px) translateY(0) scale(0.5) rotateZ(0deg);
-        opacity: 1;
-    }
-    100% {
-        transform: translateX(1200px) translateY(0) scale(0.3) rotateZ(0deg);
-        opacity: 0;
-    }
 }

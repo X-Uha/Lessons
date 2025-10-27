@@ -6,7 +6,8 @@ body {
     font-size: 16px;
     font-weight: 400;
     color: rgba(0, 0, 0, 0.676);
-    background-color: #cdcbba;;
+    background-color: #cdcbba;
+    ;
 }
 
 .wrapper {
@@ -36,6 +37,7 @@ body {
     z-index: 1;
     /* Над небом і хмарами */
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    /* Для кращої видимості */
 }
 
 /* Небо */
@@ -47,6 +49,7 @@ body {
     height: 100%;
     /* Заповнює весь header */
     background: linear-gradient(to bottom, #87CEEB, #4682B4);
+    /* Блакитний градієнт */
     z-index: 0;
     /* Під текстом header__title */
 }
@@ -145,18 +148,18 @@ body {
     min-height: 600px;
     /* Явна висота для розміщення автомобіля та дороги */
     position: relative;
-    /* Контекст для абсолютного позиціонування дочірніх елементів */
+    /* Контекст для абсолютного позиціонування дітей */
 }
 
 .car {
     position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        /* Центрування */
-        width: 500px;
-        height: 500px;
-        max-height: 80vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Центрування */
+    width: 500px;
+    height: 500px;
+    max-height: 80vh;
 }
 
 .car__circle-bg {
@@ -511,6 +514,7 @@ body {
     z-index: -2;
     /* Позаду трикутників */
     bottom: 50%;
+    /* Вирівнювання по нижній частині автомобіля */
     animation: skew-sway 4s ease-in-out infinite;
 }
 
@@ -566,6 +570,7 @@ body {
     /* Асинхронне колихання */
 }
 
+/* Вертикальна пунктирна розмітка для дороги */
 .road__dash-vertical {
     position: absolute;
     width: 6px;
@@ -624,6 +629,7 @@ body {
         opacity: 0;
     }
 }
+
 .road {
     position: absolute;
     margin: auto;
@@ -664,7 +670,8 @@ body {
 
 .footer__copy p {
     font-weight: 500;
-    color:rgba(0, 0, 0, 0.266);;
+    color: rgba(0, 0, 0, 0.266);
+    ;
 }
 
 .footer__link {
@@ -686,400 +693,3 @@ body {
 .footer__link:hover::after {
     width: 100%;
 }
-
-.car {
-    animation: drive 3s ease-in-out infinite;
-}
-
-
-.car__headlight--left,
-.car__headlight--right {
-    animation: blink-headlight 1.5s ease-in-out infinite;
-}
-
-.car__window::before {
-    animation: sun-glare 4s ease-in-out infinite;
-}
-
-.car__window::after {
-    animation: sun-glare-alt 4s ease-in-out infinite;
-    animation-delay: 0.5s;
- 
-}
-
-@keyframes drive {
-    0% {
-        transform: translate(-50%, -50%) translateX(0) translateY(0);
-    }
-
-    50% {
-        transform: translate(-50%, -50%) translateX(20px) translateY(-5px);
-    
-    }
-
-    100% {
-        transform: translate(-50%, -50%) translateX(0) translateY(0);
-    }
-}
-
-@keyframes blink-headlight {
-
-    0%,
-    100% {
-        box-shadow: 0 0 25px 0 #e1f0fc, inset 0 0 25px 0 #e1f0fc;
-        opacity: 1;
-    }
-
-    50% {
-        box-shadow: 0 0 40px 10px #e1f0fc, inset 0 0 40px 10px #e1f0fc;
-        opacity: 0.8;
-    }
-}
-
-@keyframes sun-glare {
-    0% {
-        transform: rotate(-40deg) translateX(0) translateY(0);
-        opacity: 0.2;
-    }
-
-    50% {
-        transform: rotate(-40deg) translateX(50px) translateY(-20px);
-        opacity: 0.4;
-    }
-
-    100% {
-        transform: rotate(-40deg) translateX(0) translateY(0);
-        opacity: 0.2;
-    }
-}
-
-@keyframes sun-glare-alt {
-    0% {
-        transform: rotate(-40deg) translateX(0) translateY(0);
-        opacity: 0.2;
-    }
-
-    50% {
-        transform: rotate(-40deg) translateX(-30px) translateY(10px);
-        opacity: 0.3;
-    }
-
-    100% {
-        transform: rotate(-40deg) translateX(0) translateY(0);
-        opacity: 0.2;
-    }
-}
-
-.car__wheel {
-    position: absolute;
-    margin: auto;
-    bottom: 140px;
-    height: 100px;
-    width: 70px;
-    border-radius: 15px;
-    background: #303030;
-    overflow: hidden;
-    z-index: 1;
-    animation: wheel-vibration 1.2s ease-in-out infinite;
-}
-
-.car__wheel--left {
-    left: 0;
-}
-
-.car__wheel--right {
-    right: 0;
-}
-
-.car__wheel::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 50px;
-    height: 50px;
-    background: radial-gradient(circle, #444 10%, transparent 15%, #444 20%, transparent 25%);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    animation: wheel-spin-front 0.5s linear infinite;
-}
-
-.car__wheel::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 30px;
-    height: 30px;
-    background: radial-gradient(circle, #666 10%, transparent 15%, #666 20%, transparent 25%);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    animation: wheel-spin-front 0.5s linear infinite reverse;
-    /* Обертання в протилежному напрямку */
-}
-
-@keyframes wheel-vibration {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(3px);
-    }
-}
-
-@keyframes wheel-spin-front {
-    0% {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 0.7;
-    }
-
-    50% {
-        transform: translate(-50%, -50%) scale(1.15);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 0.7;
-    }
-}
-
-.road__line {
-    animation: road-move 2s linear infinite;
-}
-
-
-.car__circle-bg {
-    animation: sun-pulse 3s ease-in-out infinite;
-}
-
-
-.header__sky::before {
-    animation: cloud-drift 12s linear infinite;
-}
-
-.header__sky::after {
-    animation: cloud-drift-alt 14s linear infinite;
-}
-
-.header__cloud {
-    animation: cloud-drift-third 10s linear infinite;
-}
-
-.header__sky::before::after {
-    animation: cloud-drift-detail 12s linear infinite;
-}
-
-.header__sky::after::after {
-    animation: cloud-drift-detail-alt 14s linear infinite;
-}
-
-.header__cloud::before {
-    animation: cloud-drift-detail-third 10s linear infinite;
-}
-
-@keyframes road-move {
-    0% {
-        transform: translateX(0);
-        filter: blur(2px);
-    }
-
-    50% {
-        transform: translateX(-20px);
-        filter: blur(3px);
-    }
-
-    100% {
-        transform: translateX(0);
-        filter: blur(2px);
-    }
-}
-
-@keyframes sun-pulse {
-    0% {
-        background: linear-gradient(crimson 5%, transparent 40%);
-        transform: scale(1);
-        opacity: 0.8;
-    }
-
-    50% {
-        background: linear-gradient(to bottom, #ff4040 5%, transparent 40%);
-        transform: scale(1.05);
-        opacity: 1;
-    }
-
-    100% {
-        background: linear-gradient(crimson 5%, transparent 40%);
-        transform: scale(1);
-        opacity: 0.8;
-    }
-}
-
-@keyframes cloud-drift {
-    0% {
-        transform: translateX(0) scale(1);
-        background: #fff;
-        box-shadow:
-            20px 10px 0 -10px #fff,
-            -20px 5px 0 -5px #fff,
-            0 0 20px rgba(255, 255, 255, 0.5);
-        opacity: 0.9;
-    }
-
-    50% {
-        transform: translateX(100px) scale(1.1);
-        background: #f8f8f8;
-        box-shadow:
-            25px 15px 0 -8px #f8f8f8,
-            -25px 7px 0 -3px #f8f8f8,
-            0 0 30px rgba(255, 255, 255, 0.7);
-        opacity: 0.95;
-    }
-
-    100% {
-        transform: translateX(0) scale(1);
-        background: #fff;
-        box-shadow:
-            20px 10px 0 -10px #fff,
-            -20px 5px 0 -5px #fff,
-            0 0 20px rgba(255, 255, 255, 0.5);
-        opacity: 0.9;
-    }
-}
-
-@keyframes cloud-drift-alt {
-    0% {
-        transform: translateX(0) scale(1);
-        background: #f0f0f0;
-        box-shadow:
-            25px 15px 0 -10px #f0f0f0,
-            -15px 10px 0 -5px #f0f0f0,
-            0 0 20px rgba(240, 240, 240, 0.5);
-        opacity: 0.85;
-    }
-
-    50% {
-        transform: translateX(-80px) scale(1.15);
-        background: #e8e8e8;
-        box-shadow:
-            30px 20px 0 -8px #e8e8e8,
-            -20px 12px 0 -3px #e8e8e8,
-            0 0 25px rgba(240, 240, 240, 0.7);
-        opacity: 0.9;
-    }
-
-    100% {
-        transform: translateX(0) scale(1);
-        background: #f0f0f0;
-        box-shadow:
-            25px 15px 0 -10px #f0f0f0,
-            -15px 10px 0 -5px #f0f0f0,
-            0 0 20px rgba(240, 240, 240, 0.5);
-        opacity: 0.85;
-    }
-}
-
-@keyframes cloud-drift-third {
-    0% {
-        transform: translateX(0) scale(1);
-        background: #e0e0e0;
-        box-shadow:
-            15px 10px 0 -5px #e0e0e0,
-            -10px 5px 0 -5px #e0e0e0,
-            0 0 20px rgba(224, 224, 224, 0.5);
-        opacity: 0.8;
-    }
-
-    50% {
-        transform: translateX(60px) scale(1.1);
-        background: #d8d8d8;
-        box-shadow:
-            20px 12px 0 -3px #d8d8d8,
-            -15px 7px 0 -3px #d8d8d8,
-            0 0 25px rgba(224, 224, 224, 0.7);
-        opacity: 0.85;
-    }
-
-    100% {
-        transform: translateX(0) scale(1);
-        background: #e0e0e0;
-        box-shadow:
-            15px 10px 0 -5px #e0e0e0,
-            -10px 5px 0 -5px #e0e0e0,
-            0 0 20px rgba(224, 224, 224, 0.5);
-        opacity: 0.8;
-    }
-}
-
-@keyframes cloud-drift-detail {
-    0% {
-        transform: translateX(0) scale(1);
-        background: #fff;
-        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-        opacity: 0.9;
-    }
-
-    50% {
-        transform: translateX(20px) scale(1.05);
-        background: #f8f8f8;
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
-        opacity: 0.95;
-    }
-
-    100% {
-        transform: translateX(0) scale(1);
-        background: #fff;
-        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-        opacity: 0.9;
-    }
-}
-
-@keyframes cloud-drift-detail-alt {
-    0% {
-        transform: translateX(0) scale(1);
-        background: #f0f0f0;
-        box-shadow: 0 0 15px rgba(240, 240, 240, 0.5);
-        opacity: 0.85;
-    }
-
-    50% {
-        transform: translateX(-15px) scale(1.1);
-        background: #e8e8e8;
-        box-shadow: 0 0 20px rgba(240, 240, 240, 0.7);
-        opacity: 0.9;
-    }
-
-    100% {
-        transform: translateX(0) scale(1);
-        background: #f0f0f0;
-        box-shadow: 0 0 15px rgba(240, 240, 240, 0.5);
-        opacity: 0.85;
-    }
-}
-
-@keyframes cloud-drift-detail-third {
-    0% {
-        transform: translateX(0) scale(1);
-        background: #e0e0e0;
-        box-shadow: 0 0 15px rgba(224, 224, 224, 0.5);
-        opacity: 0.8;
-    }
-
-    50% {
-        transform: translateX(10px) scale(1.05);
-        background: #d8d8d8;
-        box-shadow: 0 0 20px rgba(224, 224, 224, 0.7);
-        opacity: 0.85;
-    }
-
-    100% {
-        transform: translateX(0) scale(1);
-        background: #e0e0e0;
-        box-shadow: 0 0 15px rgba(224, 224, 224, 0.5);
-        opacity: 0.8;
-    }
-}
-
