@@ -1,0 +1,692 @@
+@import url(reset.css);
+@import url(fonts.css);
+
+body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.676);
+    background-color: #cdcbba;;
+}
+
+.wrapper {
+    position: relative;
+
+    min-height: 100%;
+    overflow: clip;
+}
+
+[class*="__container"] {
+    max-width: 1390px;
+    margin-inline: auto;
+    padding-inline: 15px;
+}
+
+.header {
+    padding-block: 50px;
+    text-align: center;
+    position: relative;
+    /* Для позиціонування неба */
+}
+
+.header__title {
+    font-size: 44px;
+    text-transform: capitalize;
+    position: relative;
+    z-index: 1;
+    /* Над небом і хмарами */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    /* Для кращої видимості */
+}
+
+/* Небо */
+.header__sky {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Заповнює весь header */
+    background: linear-gradient(to bottom, #87CEEB, #4682B4);
+    /* Блакитний градієнт */
+    z-index: 0;
+    /* Під текстом header__title */
+}
+
+/* Перша хмара (світло-біла, складна форма) */
+.header__sky::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    width: 100px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50px;
+    box-shadow:
+        20px 10px 0 -10px #fff,
+        -20px 5px 0 -5px #fff,
+        0 0 20px rgba(255, 255, 255, 0.5);
+    /* Пухнастий ефект */
+    opacity: 0.9;
+}
+
+/* Додаткові елементи для першої хмари */
+.header__sky::before::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 30px;
+    width: 60px;
+    height: 40px;
+    background: #fff;
+    border-radius: 40px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* Друга хмара (світло-сіра, складна форма) */
+.header__sky::after {
+    content: "";
+    position: absolute;
+    top: 60px;
+    right: 50px;
+    width: 120px;
+    height: 60px;
+    background: #f0f0f0;
+    border-radius: 60px;
+    box-shadow:
+        25px 15px 0 -10px #f0f0f0,
+        -15px 10px 0 -5px #f0f0f0,
+        0 0 20px rgba(240, 240, 240, 0.5);
+    opacity: 0.85;
+}
+
+/* Додаткові елементи для другої хмари */
+.header__sky::after::after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    width: 80px;
+    height: 50px;
+    background: #f0f0f0;
+    border-radius: 50px;
+    box-shadow: 0 0 15px rgba(240, 240, 240, 0.5);
+}
+
+/* Третя хмара (сіра, складна форма) */
+.header__cloud {
+    position: absolute;
+    top: 40px;
+    left: 200px;
+    width: 90px;
+    height: 45px;
+    background: #e0e0e0;
+    border-radius: 45px;
+    box-shadow:
+        15px 10px 0 -5px #e0e0e0,
+        -10px 5px 0 -5px #e0e0e0,
+        0 0 20px rgba(224, 224, 224, 0.5);
+    opacity: 0.8;
+}
+
+/* Додаткові елементи для третьої хмари */
+.header__cloud::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    width: 60px;
+    height: 40px;
+    background: #e0e0e0;
+    border-radius: 40px;
+    box-shadow: 0 0 15px rgba(224, 224, 224, 0.5);
+}
+
+.main {
+    min-height: 600px;
+    /* Явна висота для розміщення автомобіля та дороги */
+    position: relative;
+    /* Контекст для абсолютного позиціонування дітей */
+}
+
+.car {
+    position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* Центрування */
+        width: 500px;
+        height: 500px;
+        max-height: 80vh;
+}
+
+.car__circle-bg {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: linear-gradient(crimson 5%, transparent 40%);
+    z-index: -1;
+}
+
+.car__main-body {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 500px;
+    height: 150px;
+    background: #f1edde;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.car__main-body .car__shadow {
+    position: absolute;
+    margin: auto;
+    bottom: -10px;
+    width: inherit;
+    height: 20px;
+    left: 0;
+    background: black;
+    opacity: 0.3;
+    z-index: 4;
+}
+
+.car__main-body .car__cut {
+    position: absolute;
+    margin: auto;
+    top: -40px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: inherit;
+    height: 2px;
+    background: #e0dccd;
+    z-index: 5;
+}
+
+.car__main-body .car__mask {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 400px;
+    height: 80px;
+    background: #303030;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    border-top: 4px solid #303030;
+    border-bottom: 4px solid #e0dccd;
+    z-index: 5;
+    overflow: hidden;
+}
+
+.car__main-body .car__mask::after {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: -100px;
+    right: 100px;
+    width: 20px;
+    height: 250px;
+    background: white;
+    opacity: 0.2;
+    transform: rotate(-40deg);
+}
+
+.car__main-body .car__mask .car__logo {
+    position: absolute;
+    margin: auto;
+    top: -20px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border: 4px solid white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    box-shadow: 0 0 25px 0 #e1f0fc, inset 0 0 25px 0 #e1f0fc;
+    overflow: hidden;
+}
+
+.car__main-body .car__mask .car__logo .car__logo-rect {
+    position: absolute;
+    margin: auto;
+    width: 4px;
+    height: 30px;
+    background: white;
+}
+
+.car__main-body .car__mask .car__logo .car__logo-rect--left {
+    left: 3px;
+    transform: rotate(-5deg);
+}
+
+.car__main-body .car__mask .car__logo .car__logo-rect--right {
+    right: 3px;
+    transform: rotate(5deg);
+}
+
+.car__main-body .car__mask .car__logo .car__logo-rect--center {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 10px;
+    transform: rotate(90deg);
+}
+
+.car__main-body .car__mask .car__headlight {
+    position: absolute;
+    margin: auto;
+    top: -5px;
+    width: 60px;
+    height: 60px;
+    border: 10px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 25px 0 #e1f0fc, inset 0 0 25px 0 #e1f0fc;
+}
+
+.car__main-body .car__mask .car__headlight::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: -10px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 20px;
+    height: 5px;
+    border-radius: 5px;
+    background: white;
+}
+
+.car__main-body .car__mask .car__headlight::after {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: -10px;
+    left: 0;
+    width: 20px;
+    height: 5px;
+    border-radius: 5px;
+    background: white;
+}
+
+.car__main-body .car__mask .car__headlight--left {
+    left: 20px;
+}
+
+.car__main-body .car__mask .car__headlight--right {
+    right: 20px;
+}
+
+.car__circle {
+    position: absolute;
+    margin: auto;
+    top: -60px;
+    bottom: 0;
+    width: 150px;
+    height: 120px;
+    border-radius: 50%;
+    background: #f1edde;
+    z-index: 2;
+}
+
+.car__circle--left {
+    left: 0;
+}
+
+.car__circle--right {
+    right: 0;
+}
+
+.car__upper-body {
+    position: absolute;
+    margin: auto;
+    top: -200px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100px;
+    width: 290px;
+    background: #f1edde;
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.car__upper-body .car__window {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 85px;
+    width: 280px;
+    background: #0d0822;
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 2px solid #202020;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.car__upper-body .car__window::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: -100px;
+    right: 50px;
+    width: 20px;
+    height: 250px;
+    background: white;
+    opacity: 0.2;
+    transform: rotate(-40deg);
+}
+
+.car__upper-body .car__window::after {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: -100px;
+    right: 100px;
+    width: 50px;
+    height: 250px;
+    background: white;
+    opacity: 0.2;
+    transform: rotate(-40deg);
+}
+
+.car__wheel {
+    position: absolute;
+    margin: auto;
+    bottom: 140px;
+    height: 100px;
+    width: 70px;
+    border-radius: 15px;
+    background: #303030;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.car__wheel::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    bottom: 0;
+    width: 80px;
+    height: 5px;
+    background: #252525;
+}
+
+.car__wheel--left {
+    left: 0;
+}
+
+.car__wheel--right {
+    right: 0;
+}
+
+.car__shadow--main {
+    position: absolute;
+    margin: auto;
+    top: 120px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    width: 400px;
+    background: #202020;
+    z-index: -2;
+}
+
+.car__decor-triangle {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, rgba(220, 20, 60, 0.6), transparent);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    z-index: -1;
+    animation: rotate 4s linear infinite;
+}
+
+.car__decor-triangle--left {
+    left: -120px;
+    /* Розташування зліва від автомобіля */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.car__decor-triangle--right {
+    right: -120px;
+    /* Розташування справа від автомобіля */
+    top: 50%;
+    transform: translateY(-50%);
+    animation-direction: reverse;
+    /* Обертання в протилежному напрямку */
+}
+
+/* Анімація обертання з використанням transform */
+@keyframes rotate {
+    0% {
+        transform: translateY(-50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+/* декоративні елементи (дерева) */
+.car__decor-tree-styled {
+    position: absolute;
+    width: 90px;
+    height: 140px;
+    z-index: -2;
+    /* Позаду трикутників */
+    bottom: 50%;
+    /* Вирівнювання по нижній частині автомобіля */
+    animation: skew-sway 4s ease-in-out infinite;
+}
+
+/* Стовбур */
+.car__decor-tree-styled::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 25px;
+    height: 50px;
+    background: #3c2f2f;
+    transform: translateX(-50%);
+}
+
+/* Перший шар крони */
+.car__decor-tree-styled::after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #4a7043, #2e4a2b);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* Другий шар крони */
+.car__decor-tree-styled__crown {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #6b8e23, #3c5a29);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    /* Вище першого шару */
+}
+
+.car__decor-tree-styled--left {
+    left: -250px;
+    /* Далі від трикутників */
+}
+
+.car__decor-tree-styled--right {
+    right: -250px;
+    /* Далі від трикутників */
+    animation-delay: 2s;
+    /* Асинхронне колихання */
+}
+
+/* Вертикальна пунктирна розмітка для дороги */
+.road__dash-vertical {
+    position: absolute;
+    width: 6px;
+    height: 40px;
+    background: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -3;
+    /* Позаду автомобіля */
+    animation: move-dash-vertical 1.5s linear infinite;
+}
+
+.road__dash-vertical:nth-child(2) {
+    top: 100px;
+    animation-delay: 0.5s;
+}
+
+.road__dash-vertical:nth-child(3) {
+    top: 200px;
+    animation-delay: 1s;
+}
+
+.road__dash-vertical:nth-child(4) {
+    top: 300px;
+    animation-delay: 1.5s;
+}
+
+/* Анімація нахилу дерев */
+@keyframes skew-sway {
+    0% {
+        transform: skewX(-2deg);
+    }
+
+    50% {
+        transform: skewX(2deg);
+    }
+
+    100% {
+        transform: skewX(-2deg);
+    }
+}
+
+/* Анімація руху вертикальної розмітки */
+@keyframes move-dash-vertical {
+    0% {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(500px);
+        opacity: 0;
+    }
+}
+.road {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 500px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.road__line {
+    position: absolute;
+    margin: auto;
+    top: 230px;
+    right: 0;
+    bottom: 0;
+    height: 10px;
+    width: 600px;
+    border-radius: 10px;
+    background: #5c4b51;
+    z-index: 0;
+}
+
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-block: 20px;
+    text-align: center;
+}
+
+.footer__copy {
+    margin-bottom: 15px;
+}
+
+.footer__copy p {
+    font-weight: 500;
+    color:rgba(0, 0, 0, 0.266);;
+}
+
+.footer__link {
+    position: relative;
+    color: rgba(128, 0, 128, 0.612);
+}
+
+.footer__link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgba(128, 0, 128, 0.841);
+    transition: all 0.3s;
+}
+
+.footer__link:hover::after {
+    width: 100%;
+}
