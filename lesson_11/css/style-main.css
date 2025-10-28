@@ -12,7 +12,6 @@ body {
 
 .wrapper {
     position: relative;
-
     min-height: 100%;
     overflow: clip;
 }
@@ -24,20 +23,19 @@ body {
 }
 
 .header {
-    padding-block: 50px;
+    padding-block: 30px;
     text-align: center;
     position: relative;
     /* Для позиціонування неба */
 }
 
 .header__title {
-    font-size: 44px;
+    font-size: 35px;
     text-transform: capitalize;
     position: relative;
     z-index: 1;
     /* Над небом і хмарами */
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    /* Для кращої видимості */
 }
 
 /* Небо */
@@ -49,7 +47,6 @@ body {
     height: 100%;
     /* Заповнює весь header */
     background: linear-gradient(to bottom, #87CEEB, #4682B4);
-    /* Блакитний градієнт */
     z-index: 0;
     /* Під текстом header__title */
 }
@@ -89,7 +86,7 @@ body {
 .header__sky::after {
     content: "";
     position: absolute;
-    top: 60px;
+    top: 15px;
     right: 50px;
     width: 120px;
     height: 60px;
@@ -118,7 +115,7 @@ body {
 /* Третя хмара (сіра, складна форма) */
 .header__cloud {
     position: absolute;
-    top: 40px;
+    top: 20px;
     left: 200px;
     width: 90px;
     height: 45px;
@@ -148,7 +145,7 @@ body {
     min-height: 600px;
     /* Явна висота для розміщення автомобіля та дороги */
     position: relative;
-    /* Контекст для абсолютного позиціонування дітей */
+    /* Контекст для абсолютного позиціонування дочірніх елементів */
 }
 
 .car {
@@ -514,7 +511,6 @@ body {
     z-index: -2;
     /* Позаду трикутників */
     bottom: 50%;
-    /* Вирівнювання по нижній частині автомобіля */
     animation: skew-sway 4s ease-in-out infinite;
 }
 
@@ -559,18 +555,17 @@ body {
 }
 
 .car__decor-tree-styled--left {
-    left: -250px;
+    left: -260px;
     /* Далі від трикутників */
 }
 
 .car__decor-tree-styled--right {
-    right: -250px;
+    right: -260px;
     /* Далі від трикутників */
     animation-delay: 2s;
     /* Асинхронне колихання */
 }
 
-/* Вертикальна пунктирна розмітка для дороги */
 .road__dash-vertical {
     position: absolute;
     width: 6px;
@@ -658,10 +653,14 @@ body {
 
 .footer {
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
+    left: 0;
     width: 100%;
-    padding-block: 20px;
+    height: 80px;
     text-align: center;
+    padding: 15px 0;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 10;
 }
 
 .footer__copy {
