@@ -462,7 +462,7 @@ body {
     margin-top: -10px;
 }
 
-.footer .ground {
+.footer__ground {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -472,7 +472,7 @@ body {
     z-index: -1;
 }
 
-.footer .ground::after {
+.footer__ground::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -483,7 +483,7 @@ body {
     transform: translateY(-50%);
 }
 
-.footer .ground::before {
+.footer__ground::before {
     content: "";
     position: absolute;
     top: 50%;
