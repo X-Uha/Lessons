@@ -38,52 +38,370 @@ body {
     left: 0;
     width: 100%;
     height: 200px;
-    background: linear-gradient(to bottom, #1a1a2e, #16213e, #0f3460);
+    background: linear-gradient(to bottom, #0a0a1a, #0f1a2e, #0f3460);
     z-index: 0;
     transform: skewY(-5deg);
     overflow: hidden;
+}
+
+.sky__moon {
+    position: absolute;
+    top: 6%;
+    left: 85%;
+    width: 180px;
+    height: 180px;
+    background:
+        radial-gradient(circle at 25% 30%, #e0e0e0 0%, #b8b8b8 25%, #707070 50%, #3a3a3a 80%, #1a1a1a 100%),
+        radial-gradient(circle at 70% 60%, #555 0%, #333 40%, transparent 70%);
+    border-radius: 50%;
+    box-shadow:
+        0 0 40px rgba(200, 200, 150, 0.5),
+        inset -25px -25px 40px rgba(0, 0, 0, 0.7),
+        inset 20px 20px 30px rgba(255, 255, 255, 0.15),
+        0 0 20px rgba(255, 255, 200, 0.3);
+    z-index: 1;
+    animation: moonRotate 30s linear infinite;
+    overflow: hidden;
+    filter: brightness(0.9) contrast(1.2);
+}
+
+.sky__moon::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle, #444 10%, #222 40%, transparent 65%);
+    border-radius: 50%;
+    top: 28%;
+    left: 32%;
+    box-shadow: inset 8px 8px 15px rgba(0, 0, 0, 0.8), 0 0 12px rgba(0, 0, 0, 0.4);
+}
+
+.sky__moon::after {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background: radial-gradient(circle, #555 15%, #333 45%, transparent 70%);
+    border-radius: 50%;
+    top: 62%;
+    left: 68%;
+    box-shadow: inset 6px 6px 12px rgba(0, 0, 0, 0.7);
+}
+
+.sky__moon .crater {
+    position: absolute;
+    background: radial-gradient(circle, #444 15%, #222 50%, transparent 75%);
+    border-radius: 50%;
+    box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.8);
+}
+
+.sky__moon .crater--1 {
+    width: 42px;
+    height: 42px;
+    top: 38%;
+    left: 52%;
+}
+
+.sky__moon .crater--2 {
+    width: 28px;
+    height: 28px;
+    top: 18%;
+    left: 48%;
+}
+
+.sky__moon .crater--3 {
+    width: 36px;
+    height: 36px;
+    top: 72%;
+    left: 22%;
+}
+
+.sky__moon .crater--4 {
+    width: 22px;
+    height: 22px;
+    top: 45%;
+    left: 78%;
+}
+
+.sky__moon .crater--5 {
+    width: 30px;
+    height: 30px;
+    top: 15%;
+    left: 25%;
+}
+
+@keyframes moonRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .sky__star {
     position: absolute;
     background-color: #fff;
     border-radius: 50%;
-    box-shadow: 0 0 6px 2px rgba(255, 255, 255, 0.8),
-        0 0 12px 4px rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 6px 2px rgba(255, 255, 255, 0.8), 0 0 12px 4px rgba(255, 255, 255, 0.4);
     animation: twinkle 3s infinite alternate;
 }
 
-/* Стилі для зірок */
-.sky__star--1 { top: 5%; left: 5%; width: 10px; height: 10px; transform: rotate(15deg); }
-.sky__star--2 { top: 31%; left: 73%; width: 5px; height: 5px; transform: rotate(45deg); }
-.sky__star--3 { top: 3%; left: 18%; width: 7px; height: 7px; transform: rotate(75deg); }
-.sky__star--4 { top: 8%; left: 45%; width: 7px; height: 7px; transform: rotate(105deg); }
-.sky__star--5 { top: 2%; left: 95%; width: 7px; height: 7px; transform: rotate(135deg); }
-.sky__star--6 { top: 11%; left: 75%; width: 7px; height: 7px; transform: rotate(165deg); }
-.sky__star--7 { top: 21%; left: 61%; width: 5px; height: 5px; transform: rotate(195deg); }
-.sky__star--8 { top: 28%; left: 44%; width: 6px; height: 6px; transform: rotate(225deg); }
-.sky__star--9 { top: 14%; left: 25%; width: 6px; height: 6px; transform: rotate(255deg); }
-.sky__star--10 { top: 24%; left: 14%; width: 3px; height: 3px; transform: rotate(285deg); }
-.sky__star--11 { top: 41%; left: 78%; width: 3px; height: 3px; transform: rotate(315deg); }
-.sky__star--12 { top: 29%; left: 88%; width: 7px; height: 7px; transform: rotate(345deg); }
-.sky__star--13 { top: 39%; left: 38%; width: 7px; height: 7px; transform: rotate(30deg); }
-.sky__star--14 { top: 39%; left: 11%; width: 7px; height: 7px; transform: rotate(60deg); }
-.sky__star--15 { top: 49%; left: 63%; width: 4px; height: 4px; transform: rotate(90deg); }
-.sky__star--16 { top: 39%; left: 55%; width: 3px; height: 3px; transform: rotate(120deg); }
-.sky__star--17 { top: 14%; left: 88%; width: 3px; height: 3px; transform: rotate(150deg); }
-.sky__star--18 { top: 24%; left: 28%; width: 7px; height: 7px; transform: rotate(180deg); }
-.sky__star--19 { top: 1.5%; left: 58%; width: 2px; height: 2px; transform: rotate(210deg); }
-.sky__star--20 { top: 19%; left: 7%; width: 2px; height: 2px; transform: rotate(240deg); }
-.sky__star--21 { top: 49%; left: 7%; width: 2px; height: 2px; transform: rotate(270deg); }
-.sky__star--22 { top: 49%; left: 26%; width: 2px; height: 2px; transform: rotate(300deg); }
-.sky__star--23 { top: 59%; left: 81%; width: 2px; height: 2px; transform: rotate(330deg); }
-.sky__star--24 { top: 59%; left: 51%; width: 2px; height: 2px; transform: rotate(0deg); }
-.sky__star--25 { top: 65%; left: 21%; width: 3px; height: 3px; transform: rotate(20deg); }
-.sky__star--26 { top: 48%; left: 91%; width: 5px; height: 5px; transform: rotate(50deg); }
-.sky__star--27 { top: 60%; left: 3%; width: 5px; height: 5px; transform: rotate(80deg); }
-.sky__star--28 { top: 65%; left: 93%; width: 4px; height: 4px; transform: rotate(110deg); }
-.sky__star--29 { top: 70%; left: 8%; width: 4px; height: 4px; transform: rotate(140deg); }
-.sky__star--30 { top: 68%; left: 79%; width: 6px; height: 6px; transform: rotate(170deg); }
+.sky__star--1 {
+    top: 5%;
+    left: 5%;
+    width: 10px;
+    height: 10px;
+    transform: rotate(15deg);
+}
+
+.sky__star--2 {
+    top: 31%;
+    left: 73%;
+    width: 5px;
+    height: 5px;
+    transform: rotate(45deg);
+}
+
+.sky__star--3 {
+    top: 3%;
+    left: 18%;
+    width: 7px;
+    height: 7px;
+    transform: rotate(75deg);
+}
+
+.sky__star--4 {
+    top: 8%;
+    left: 45%;
+    width: 7px;
+    height: 7px;
+    transform: rotate(105deg);
+}
+
+.sky__star--5 {
+    top: 2%;
+    left: 95%;
+    width: 7px;
+    height: 7px;
+    transform: rotate(135deg);
+}
+
+.sky__star--6 {
+    top: 11%;
+    left: 75%;
+    width: 7px;
+    height: 7px;
+    transform: rotate(165deg);
+}
+
+.sky__star--7 {
+    top: 21%;
+    left: 61%;
+    width: 5px;
+    height: 5px;
+    transform: rotate(195deg);
+}
+
+.sky__star--8 {
+    top: 28%;
+    left: 44%;
+    width: 6px;
+    height: 6px;
+    transform: rotate(225deg);
+}
+
+.sky__star--9 {
+    top: 14%;
+    left: 25%;
+    width: 6px;
+    height: 6px;
+    transform: rotate(255deg);
+}
+
+.sky__star--10 {
+    top: 24%;
+    left: 14%;
+    width: 3px;
+    height: 3px;
+    transform: rotate(285deg);
+}
+
+.sky__star--11 {
+    top: 41%;
+    left: 78%;
+    width: 3px;
+    height: 3px;
+    transform: rotate(315deg);
+}
+
+.sky__star--12 {
+    top: 29%;
+    left: 88%;
+    width: 7px;
+    height: 7px;
+    transform: rotate(345deg);
+}
+
+.sky__star--13 {
+    top: 39%;
+    left: 38%;
+    width: 7px;
+    height: 7px;
+    transform: rotate(30deg);
+}
+
+.sky__star--14 {
+    top: 39%;
+    left: 11%;
+    width: 7px;
+    height: 7px;
+    transform: rotate(60deg);
+}
+
+.sky__star--15 {
+    top: 49%;
+    left: 63%;
+    width: 4px;
+    height: 4px;
+    transform: rotate(90deg);
+}
+
+.sky__star--16 {
+    top: 39%;
+    left: 55%;
+    width: 3px;
+    height: 3px;
+    transform: rotate(120deg);
+}
+
+.sky__star--17 {
+    top: 14%;
+    left: 88%;
+    width: 3px;
+    height: 3px;
+    transform: rotate(150deg);
+}
+
+.sky__star--18 {
+    top: 24%;
+    left: 28%;
+    width: 7px;
+    height: 7px;
+    transform: rotate(180deg);
+}
+
+.sky__star--19 {
+    top: 1.5%;
+    left: 58%;
+    width: 2px;
+    height: 2px;
+    transform: rotate(210deg);
+}
+
+.sky__star--20 {
+    top: 19%;
+    left: 7%;
+    width: 2px;
+    height: 2px;
+    transform: rotate(240deg);
+}
+
+.sky__star--21 {
+    top: 49%;
+    left: 7%;
+    width: 2px;
+    height: 2px;
+    transform: rotate(270deg);
+}
+
+.sky__star--22 {
+    top: 49%;
+    left: 26%;
+    width: 2px;
+    height: 2px;
+    transform: rotate(300deg);
+}
+
+.sky__star--23 {
+    top: 59%;
+    left: 81%;
+    width: 2px;
+    height: 2px;
+    transform: rotate(330deg);
+}
+
+.sky__star--24 {
+    top: 59%;
+    left: 51%;
+    width: 2px;
+    height: 2px;
+    transform: rotate(0deg);
+}
+
+.sky__star--25 {
+    top: 65%;
+    left: 21%;
+    width: 3px;
+    height: 3px;
+    transform: rotate(20deg);
+}
+
+.sky__star--26 {
+    top: 48%;
+    left: 91%;
+    width: 5px;
+    height: 5px;
+    transform: rotate(50deg);
+}
+
+.sky__star--27 {
+    top: 60%;
+    left: 3%;
+    width: 5px;
+    height: 5px;
+    transform: rotate(80deg);
+}
+
+.sky__star--28 {
+    top: 65%;
+    left: 93%;
+    width: 4px;
+    height: 4px;
+    transform: rotate(110deg);
+}
+
+.sky__star--29 {
+    top: 70%;
+    left: 8%;
+    width: 4px;
+    height: 4px;
+    transform: rotate(140deg);
+}
+
+.sky__star--30 {
+    top: 68%;
+    left: 79%;
+    width: 6px;
+    height: 6px;
+    transform: rotate(170deg);
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
 
 .sky__cloud-list {
     position: absolute;
@@ -94,6 +412,7 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
+    z-index: 1;
 }
 
 .sky__cloud-item .sky__cloud-circle {
@@ -104,33 +423,142 @@ body {
     animation: cloudMove 20s linear infinite;
 }
 
-.sky__cloud-item:nth-child(1) .sky__cloud-circle { bottom: -5px; left: -10px; }
-.sky__cloud-item:nth-child(2) .sky__cloud-circle { bottom: -15px; left: 20px; width: 130px; height: 130px; }
-.sky__cloud-item:nth-child(3) .sky__cloud-circle { bottom: -20px; left: 115px; width: 100px; height: 100px; }
-.sky__cloud-item:nth-child(4) .sky__cloud-circle { bottom: -20px; left: 180px; width: 130px; height: 130px; }
-.sky__cloud-item:nth-child(5) .sky__cloud-circle { bottom: -30px; left: 250px; width: 230px; height: 230px; }
-.sky__cloud-item:nth-child(5) .sky__cloud-circle--light { bottom: -30px; left: 250px; width: 250px; height: 250px; background: radial-gradient(circle at 40% 40%, #d5d4e7, #b9b8cc 60%, #a3bffa 80%, transparent 90%); }
-.sky__cloud-item:nth-child(6) .sky__cloud-circle { bottom: -50px; left: 370px; width: 200px; height: 200px; }
-.sky__cloud-item:nth-child(6) .sky__cloud-circle--light { bottom: -50px; left: 390px; width: 180px; height: 180px; background: radial-gradient(circle at 40% 40%, #d5d4e7, #b9b8cc 60%, #a3bffa 80%, transparent 90%); }
-.sky__cloud-item:nth-child(6) .sky__cloud-circle--dark-purple { bottom: -50px; left: 420px; width: 200px; height: 200px; background: radial-gradient(circle at 40% 40%, #656479, #4a4a6a 60%, #2e2e44 80%, transparent 90%); }
-.sky__cloud-item:nth-child(7) .sky__cloud-circle { bottom: -50px; left: 530px; width: 100px; height: 100px; }
-.sky__cloud-item:nth-child(8) .sky__cloud-circle { bottom: -50px; left: 600px; width: 130px; height: 130px; }
-.sky__cloud-item:nth-child(8) .sky__cloud-circle--dark { bottom: -50px; left: 560px; width: 130px; height: 130px; background: radial-gradient(circle at 40% 40%, #4a4a6a, #2e2e44 60%, #1a1a2e 80%, transparent 90%); }
-.sky__cloud-item:nth-child(8) .sky__cloud-circle--dark-purple { bottom: -50px; left: 580px; width: 130px; height: 130px; background: radial-gradient(circle at 40% 40%, #656479, #4a4a6a 60%, #2e2e44 80%, transparent 90%); }
-.sky__cloud-item:nth-child(9) .sky__cloud-circle { bottom: -50px; left: 670px; width: 180px; height: 180px; }
-.sky__cloud-item:nth-child(10) .sky__cloud-circle--light { bottom: 95px; left: 170px; width: 20px; height: 20px; z-index: 3; background: radial-gradient(circle at 40% 40%, #d5d4e7, #b9b8cc 60%, #a3bffa 80%, transparent 90%); }
-.sky__cloud-item:nth-child(11) .sky__cloud-circle--light { bottom: 135px; left: 230px; width: 10px; height: 10px; z-index: 3; background: radial-gradient(circle at 40% 40%, #d5d4e7, #b9b8cc 60%, #a3bffa 80%, transparent 90%); }
-.sky__cloud-item:nth-child(12) .sky__cloud-circle--light { bottom: 115px; left: 560px; width: 35px; height: 35px; z-index: 3; background: radial-gradient(circle at 40% 40%, #d5d4e7, #b9b8cc 60%, #a3bffa 80%, transparent 90%); }
+.sky__cloud-item:nth-child(1) .sky__cloud-circle {
+    bottom: -5px;
+    left: -10px;
+}
 
-@keyframes twinkle {
-    0% { opacity: 0.3; }
-    50% { opacity: 1; }
-    100% { opacity: 0.3; }
+.sky__cloud-item:nth-child(2) .sky__cloud-circle {
+    bottom: -15px;
+    left: 20px;
+    width: 130px;
+    height: 130px;
+}
+
+.sky__cloud-item:nth-child(3) .sky__cloud-circle {
+    bottom: -20px;
+    left: 115px;
+    width: 100px;
+    height: 100px;
+}
+
+.sky__cloud-item:nth-child(4) .sky__cloud-circle {
+    bottom: -20px;
+    left: 180px;
+    width: 130px;
+    height: 130px;
+}
+
+.sky__cloud-item:nth-child(5) .sky__cloud-circle {
+    bottom: -30px;
+    left: 250px;
+    width: 230px;
+    height: 230px;
+}
+
+.sky__cloud-item:nth-child(5) .sky__cloud-circle--light {
+    bottom: -30px;
+    left: 250px;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle at 40% 40%, #d5d4e7, #b9b8cc 60%, #a3bffa 80%, transparent 90%);
+}
+
+.sky__cloud-item:nth-child(6) .sky__cloud-circle {
+    bottom: -50px;
+    left: 370px;
+    width: 200px;
+    height: 200px;
+}
+
+.sky__cloud-item:nth-child(6) .sky__cloud-circle--light {
+    bottom: -50px;
+    left: 390px;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle at 40% 40%, #d5d4e7, #b9b8cc 60%, #a3bffa 80%, transparent 90%);
+}
+
+.sky__cloud-item:nth-child(6) .sky__cloud-circle--dark-purple {
+    bottom: -50px;
+    left: 420px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle at 40% 40%, #656479, #4a4a6a 60%, #2e2e44 80%, transparent 90%);
+}
+
+.sky__cloud-item:nth-child(7) .sky__cloud-circle {
+    bottom: -50px;
+    left: 530px;
+    width: 100px;
+    height: 100px;
+}
+
+.sky__cloud-item:nth-child(8) .sky__cloud-circle {
+    bottom: -50px;
+    left: 600px;
+    width: 130px;
+    height: 130px;
+}
+
+.sky__cloud-item:nth-child(8) .sky__cloud-circle--dark {
+    bottom: -50px;
+    left: 560px;
+    width: 130px;
+    height: 130px;
+    background: radial-gradient(circle at 40% 40%, #4a4a6a, #2e2e44 60%, #1a1a2e 80%, transparent 90%);
+}
+
+.sky__cloud-item:nth-child(8) .sky__cloud-circle--dark-purple {
+    bottom: -50px;
+    left: 580px;
+    width: 130px;
+    height: 130px;
+    background: radial-gradient(circle at 40% 40%, #656479, #4a4a6a 60%, #2e2e44 80%, transparent 90%);
+}
+
+.sky__cloud-item:nth-child(9) .sky__cloud-circle {
+    bottom: -50px;
+    left: 670px;
+    width: 180px;
+    height: 180px;
+}
+
+.sky__cloud-item:nth-child(10) .sky__cloud-circle--light {
+    bottom: 95px;
+    left: 170px;
+    width: 20px;
+    height: 20px;
+    z-index: 3;
+    background: radial-gradient(circle at 40% 40%, #d5d4e7, #b9b8cc 60%, #a3bffa 80%, transparent 90%);
+}
+
+.sky__cloud-item:nth-child(11) .sky__cloud-circle--light {
+    bottom: 135px;
+    left: 230px;
+    width: 10px;
+    height: 10px;
+    z-index: 3;
+    background: radial-gradient(circle at 40% 40%, #d5d4e7, #b9b8cc 60%, #a3bffa 80%, transparent 90%);
+}
+
+.sky__cloud-item:nth-child(12) .sky__cloud-circle--light {
+    bottom: 115px;
+    left: 560px;
+    width: 35px;
+    height: 35px;
+    z-index: 3;
+    background: radial-gradient(circle at 40% 40%, #d5d4e7, #b9b8cc 60%, #a3bffa 80%, transparent 90%);
 }
 
 @keyframes cloudMove {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-200px); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-200px);
+    }
 }
 
 .plane-section {
@@ -138,7 +566,7 @@ body {
     margin: 20px auto;
     width: 1100px;
     height: 310px;
-    z-index: 1;
+    z-index: 2;
     overflow: visible;
 }
 
@@ -422,6 +850,34 @@ body {
     top: 50%;
     left: 51%;
     transform: translate(-50%, -50%);
+    animation: rotateFan 0.3s linear infinite;
+    transform-origin: center;
+}
+
+.plane__fan::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.4) 0%, transparent 60%);
+    border-radius: inherit;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    animation: fanGlint 0.6s ease-in-out infinite;
+    z-index: 1;
+}
+
+@keyframes fanGlint {
+
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
 }
 
 .plane__front {
@@ -454,6 +910,83 @@ body {
     position: absolute;
     left: 49%;
     z-index: -10;
+}
+
+@keyframes rotateFan {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes flightSequence {
+    0% {
+        transform: translateX(-700px) translateY(0) scale(0.5);
+        opacity: 1;
+    }
+
+    20% {
+        transform: translateX(70px) translateY(0) scale(1);
+        opacity: 1;
+    }
+
+    24% {
+        transform: translateX(100px) translateY(0) scale(1);
+        opacity: 1;
+    }
+
+    29% {
+        transform: translateX(100px) translateY(0) scale(1) rotateZ(20deg);
+    }
+
+    34% {
+        transform: translateX(100px) translateY(0) scale(1) rotateZ(-20deg);
+    }
+
+    39% {
+        transform: translateX(100px) translateY(0) scale(1) rotateZ(20deg);
+    }
+
+    44% {
+        transform: translateX(100px) translateY(0) scale(1) rotateZ(0deg);
+    }
+
+    49% {
+        transform: translateX(80px) translateY(-80px) scale(1) rotateZ(90deg);
+    }
+
+    54% {
+        transform: translateX(80px) translateY(0) scale(1) rotateZ(180deg);
+    }
+
+    59% {
+        transform: translateX(80px) translateY(80px) scale(1) rotateZ(270deg);
+    }
+
+    64% {
+        transform: translateX(80px) translateY(0) scale(1) rotateZ(360deg);
+    }
+
+    74% {
+        transform: translateX(150px) translateY(50px) scale(1) rotateZ(-45deg);
+    }
+
+    84% {
+        transform: translateX(100px) translateY(0) scale(1) rotateZ(0deg);
+    }
+
+    92% {
+        transform: translateX(750px) translateY(0) scale(0.5) rotateZ(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(1200px) translateY(0) scale(0.3) rotateZ(0deg);
+        opacity: 0;
+    }
 }
 
 .footer {
@@ -490,13 +1023,7 @@ body {
     left: 0;
     width: 100%;
     height: 6px;
-    background: linear-gradient(to right,
-            transparent 0%,
-            transparent 48%,
-            #fff 48%,
-            #fff 52%,
-            transparent 52%,
-            transparent 100%);
+    background: linear-gradient(to right, transparent 0%, transparent 48%, #fff 48%, #fff 52%, transparent 52%, transparent 100%);
     background-size: 20px 100%;
     transform: translateY(-50%);
     z-index: 1;
@@ -504,70 +1031,17 @@ body {
 }
 
 @keyframes stripeMove {
-    0% { background-position: 0 0; }
-    100% { background-position: -20px 0; }
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -20px 0;
+    }
 }
 
 .footer__text {
     position: relative;
     z-index: 2;
-    text-align: center;
-}
-
-@keyframes flightSequence {
-    /* Наближення з паузою: 0-24% (6 секунд, включаючи 1 секунду паузи) */
-    0% {
-        transform: translateX(-700px) translateY(0) scale(0.5);
-        opacity: 1;
-    }
-    20% {
-        transform: translateX(70px) translateY(0) scale(1);
-        opacity: 1;
-    }
-    24% {
-        transform: translateX(100px) translateY(0) scale(1);
-        opacity: 1;
-    }
-    /* Маятникове розгойдування: 24-44% (5 секунд) */
-    29% {
-        transform: translateX(100px) translateY(0) scale(1) rotateZ(20deg);
-    }
-    34% {
-        transform: translateX(100px) translateY(0) scale(1) rotateZ(-20deg);
-    }
-    39% {
-        transform: translateX(100px) translateY(0) scale(1) rotateZ(20deg);
-    }
-    44% {
-        transform: translateX(100px) translateY(0) scale(1) rotateZ(0deg);
-    }
-    /* Мертва петля: 44-64% (5 секунд) */
-    49% {
-        transform: translateX(80px) translateY(-80px) scale(1) rotateZ(90deg);
-    }
-    54% {
-        transform: translateX(80px) translateY(0) scale(1) rotateZ(180deg);
-    }
-    59% {
-        transform: translateX(80px) translateY(80px) scale(1) rotateZ(270deg);
-    }
-    64% {
-        transform: translateX(80px) translateY(0) scale(1) rotateZ(360deg);
-    }
-    /* Поворот ліворуч: 64-84% (5 секунд) */
-    74% {
-        transform: translateX(150px) translateY(50px) scale(1) rotateZ(-45deg);
-    }
-    84% {
-        transform: translateX(100px) translateY(0) scale(1) rotateZ(0deg);
-    }
-    /* Відліт за край: 84-100% (4 секунди) */
-    92% {
-        transform: translateX(750px) translateY(0) scale(0.5) rotateZ(0deg);
-        opacity: 1;
-    }
-    100% {
-        transform: translateX(1200px) translateY(0) scale(0.3) rotateZ(0deg);
-        opacity: 0;
-    }
+    text-align-last: left;
 }
