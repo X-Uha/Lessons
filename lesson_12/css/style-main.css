@@ -517,8 +517,8 @@ body {
 
 .car__decor-triangle {
     position: absolute;
-    width: 60px;
-    height: 60px;
+    width: 25px;
+    height: 55px;
     background: linear-gradient(45deg, rgba(220, 20, 60, 0.6), transparent);
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     z-index: -1;
@@ -526,14 +526,14 @@ body {
 }
 
 .car__decor-triangle--left {
-    left: -120px;
-    top: 50%;
+    left: -85px;
+    top: 60%;
     transform: translateY(-50%);
 }
 
 .car__decor-triangle--right {
-    right: -120px;
-    top: 50%;
+    right: -85px;
+    top: 60%;
     transform: translateY(-50%);
     animation-direction: reverse;
 }
@@ -553,7 +553,7 @@ body {
     width: 90px;
     height: 140px;
     z-index: -2;
-    bottom: 50%;
+    bottom: 40%;
     animation: skew-sway 4s ease-in-out infinite;
 }
 
@@ -1428,4 +1428,327 @@ body {
     }
 }
 
+.buildings {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -2;
+    perspective: 1200px;
+    transform-style: preserve-3d;
+}
+
+.building {
+    position: absolute;
+    bottom: 300px;
+    width: 130px;
+    height: 450px;
+    background: #34495e;
+    border-radius: 6px 6px 0 0;
+    box-shadow:
+        0 30px 60px rgba(0, 0, 0, 0.5),
+        0 0 30px rgba(0, 0, 0, 0.3);
+    transform-style: preserve-3d;
+    animation: sway-building 7s ease-in-out infinite;
+    overflow: hidden;
+}
+
+.building::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 20px;
+    height: 100%;
+    background: linear-gradient(to right, #2c3e50, #1a252f);
+    transform: rotateY(-90deg);
+    transform-origin: right;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.building::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: #2c3e50;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.building--left {
+    left: -8%;
+    height: 350px;
+    transform:
+        translateZ(-350px) rotateY(18deg) scale(0.72);
+    animation-delay: 0s;
+}
+
+.building--right {
+    right: -5%;
+    height: 300px;
+    transform:
+        translateZ(-220px) rotateY(-15deg) scale(0.88);
+    animation-delay: 3.5s;
+}
+
+.building__windows {
+    position: absolute;
+    top: 25px;
+    left: 15px;
+    right: 15px;
+    bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    gap: 7px;
+    padding: 8px;
+}
+
+.building__windows>div {
+    background: #1a1a2e;
+    border: 1px solid #16213e;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.building__windows>div::before {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 60%;
+    height: 60%;
+    background: rgba(255, 255, 220, 0.15);
+    border-radius: 1px;
+    opacity: 0;
+    animation: window-flicker 4s ease-in-out infinite;
+}
+
+.building__windows>div:nth-child(3n):before {
+    animation-delay: 0.5s;
+}
+
+.building__windows>div:nth-child(3n+1):before {
+    animation-delay: 1.2s;
+}
+
+.building__windows>div:nth-child(even):before {
+    animation-delay: 2s;
+}
+
+.building__windows>div:nth-child(4)::before,
+.building__windows>div:nth-child(7)::before,
+.building__windows>div:nth-child(12)::before,
+.building__windows>div:nth-child(19)::before,
+.building__windows>div:nth-child(23)::before {
+    background: #f39c12;
+    opacity: 0.8;
+    animation: window-glow 3s ease-in-out infinite alternate;
+}
+
+.building__roof {
+    position: absolute;
+    top: -25px;
+    left: -15px;
+    right: -15px;
+    height: 35px;
+    background: linear-gradient(to bottom, #95a5a6, #7f8c8d);
+    border-radius: 6px 6px 0 0;
+    box-shadow:
+        0 -15px 25px rgba(0, 0, 0, 0.3),
+        inset 0 5px 10px rgba(255, 255, 255, 0.1);
+    transform: rotateX(15deg);
+    transform-origin: bottom;
+}
+
+
+@keyframes sway-building {
+
+    0%,
+    100% {
+        transform: translateZ(-250px) rotateY(18deg) scale(0.92) translateX(0);
+    }
+
+    50% {
+        transform: translateZ(-250px) rotateY(20deg) scale(0.93) translateX(8px);
+    }
+}
+
+.building--right {
+    animation-name: sway-building-right;
+}
+
+@keyframes sway-building-right {
+
+    0%,
+    100% {
+        transform: translateZ(-220px) rotateY(-15deg) scale(0.88) translateX(0);
+    }
+
+    50% {
+        transform: translateZ(-220px) rotateY(-17deg) scale(0.89) translateX(-6px);
+    }
+}
+
+@keyframes window-flicker {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+}
+
+@keyframes window-glow {
+    0% {
+        opacity: 0.7;
+        box-shadow: 0 0 5px #f39c12;
+    }
+
+    100% {
+        opacity: 1;
+        box-shadow: 0 0 12px #f39c12, 0 0 20px rgba(255, 152, 0, 0.5);
+    }
+}
+
+@keyframes flicker-burnout {
+
+    0%,
+    100% {
+        opacity: 0.9;
+        box-shadow: 0 0 12px rgba(243, 156, 18, 0.8);
+    }
+
+    10% {
+        opacity: 0.3;
+    }
+
+    15% {
+        opacity: 0.95;
+    }
+
+    20% {
+        opacity: 0.4;
+    }
+
+    25% {
+        opacity: 0.9;
+    }
+
+    30% {
+        opacity: 0.2;
+    }
+
+    35% {
+        opacity: 0.85;
+    }
+
+    40% {
+        opacity: 0.5;
+    }
+
+    45% {
+        opacity: 0.92;
+    }
+
+    50% {
+        opacity: 0.1;
+    }
+
+    55% {
+        opacity: 0.88;
+    }
+
+    60% {
+        opacity: 0.6;
+    }
+
+    80% {
+        opacity: 0.9;
+    }
+
+    85% {
+        opacity: 0.3;
+    }
+
+    90% {
+        opacity: 0.95;
+    }
+
+    95% {
+        opacity: 0.7;
+    }
+}
+
+@keyframes neon-glow {
+
+    0%,
+    100% {
+        opacity: 0.8;
+        box-shadow: 0 0 10px #3498db, 0 0 20px #2980b9;
+    }
+
+    50% {
+        opacity: 1;
+        box-shadow: 0 0 20px #3498db, 0 0 40px #2980b9, 0 0 60px rgba(52, 152, 219, 0.5);
+    }
+}
+
+
+.building--left .building__windows>div:nth-child(6)::before,
+.building--left .building__windows>div:nth-child(18)::before {
+    background: #f39c12;
+    opacity: 0.9;
+    animation: flicker-burnout 4s ease-in-out infinite;
+    animation-delay: 0s;
+}
+
+.building--left .building__windows>div:nth-child(9)::before,
+.building--left .building__windows>div:nth-child(22)::before {
+    background: #e67e22;
+    opacity: 0.85;
+    animation: flicker-burnout 3.5s ease-in-out infinite;
+    animation-delay: 1.2s;
+}
+
+.building--left .building__windows>div:nth-child(13)::before {
+    background: #3498db;
+    opacity: 0.8;
+    animation: neon-glow 2.8s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+.building--right .building__windows>div:nth-child(7)::before,
+.building--right .building__windows>div:nth-child(20)::before {
+    background: #f1c40f;
+    opacity: 0.85;
+    animation: flicker-burnout 4.2s ease-in-out infinite;
+    animation-delay: 0.8s;
+}
+
+.building--right .building__windows>div:nth-child(15)::before {
+    background: #e67e22;
+    opacity: 0.8;
+    animation: flicker-burnout 3.8s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+.building--right .building__windows>div:nth-child(10)::before,
+.building--right .building__windows>div:nth-child(23)::before {
+    background: #2980b9;
+    opacity: 0.9;
+    animation: neon-glow 3s ease-in-out infinite;
+    animation-delay: 1s;
+}
 
