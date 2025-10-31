@@ -38,20 +38,17 @@ body {
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-/* Небо */
 .header__sky {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    /* Заповнює весь header */
     background: linear-gradient(to bottom, #87CEEB, #4682B4);
     z-index: 0;
-    /* Під текстом header__title */
+    overflow: hidden;
 }
 
-/* Перша хмара (світло-біла, складна форма) */
 .header__sky::before {
     content: "";
     position: absolute;
@@ -61,28 +58,18 @@ body {
     height: 50px;
     background: #fff;
     border-radius: 50px;
+    opacity: 0.9;
     box-shadow:
         20px 10px 0 -10px #fff,
         -20px 5px 0 -5px #fff,
+        30px -10px 0 -15px #fff,
+        /* верхній пухирець */
+        50px 5px 0 -12px #fff,
+        /* правий додатковий */
         0 0 20px rgba(255, 255, 255, 0.5);
-    /* Пухнастий ефект */
-    opacity: 0.9;
+    z-index: 1;
 }
 
-/* Додаткові елементи для першої хмари */
-.header__sky::before::after {
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: 30px;
-    width: 60px;
-    height: 40px;
-    background: #fff;
-    border-radius: 40px;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-}
-
-/* Друга хмара (світло-сіра, складна форма) */
 .header__sky::after {
     content: "";
     position: absolute;
@@ -92,27 +79,16 @@ body {
     height: 60px;
     background: #f0f0f0;
     border-radius: 60px;
+    opacity: 0.85;
     box-shadow:
         25px 15px 0 -10px #f0f0f0,
         -15px 10px 0 -5px #f0f0f0,
+        20px -15px 0 -12px #f0f0f0,
+        45px 8px 0 -14px #f0f0f0,
         0 0 20px rgba(240, 240, 240, 0.5);
-    opacity: 0.85;
+    z-index: 1;
 }
 
-/* Додаткові елементи для другої хмари */
-.header__sky::after::after {
-    content: "";
-    position: absolute;
-    top: -15px;
-    left: 20px;
-    width: 80px;
-    height: 50px;
-    background: #f0f0f0;
-    border-radius: 50px;
-    box-shadow: 0 0 15px rgba(240, 240, 240, 0.5);
-}
-
-/* Третя хмара (сіра, складна форма) */
 .header__cloud {
     position: absolute;
     top: 20px;
@@ -121,14 +97,17 @@ body {
     height: 45px;
     background: #e0e0e0;
     border-radius: 45px;
+    opacity: 0.8;
     box-shadow:
         15px 10px 0 -5px #e0e0e0,
         -10px 5px 0 -5px #e0e0e0,
+        20px -10px 0 -10px #e0e0e0,
+        /* верхній пухирець */
+        35px 5px 0 -8px #e0e0e0,
         0 0 20px rgba(224, 224, 224, 0.5);
-    opacity: 0.8;
+    z-index: 1;
 }
 
-/* Додаткові елементи для третьої хмари */
 .header__cloud::before {
     content: "";
     position: absolute;
@@ -139,6 +118,7 @@ body {
     background: #e0e0e0;
     border-radius: 40px;
     box-shadow: 0 0 15px rgba(224, 224, 224, 0.5);
+    z-index: 2;
 }
 
 .main {
