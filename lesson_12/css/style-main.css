@@ -6,7 +6,7 @@ body {
     font-size: 16px;
     font-weight: 400;
     color: rgba(0, 0, 0, 0.676);
-    background-color: #cdcbba;;
+    background-color: #cdcbba;
 }
 
 .wrapper {
@@ -49,7 +49,6 @@ body {
     /* Під текстом header__title */
 }
 
-/* Перша хмара (світло-біла, складна форма) */
 .header__sky::before {
     content: "";
     position: absolute;
@@ -63,24 +62,9 @@ body {
         20px 10px 0 -10px #fff,
         -20px 5px 0 -5px #fff,
         0 0 20px rgba(255, 255, 255, 0.5);
-    /* Пухнастий ефект */
     opacity: 0.9;
 }
 
-/* Додаткові елементи для першої хмари */
-.header__sky::before::after {
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: 30px;
-    width: 60px;
-    height: 40px;
-    background: #fff;
-    border-radius: 40px;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-}
-
-/* Друга хмара (світло-сіра, складна форма) */
 .header__sky::after {
     content: "";
     position: absolute;
@@ -97,20 +81,6 @@ body {
     opacity: 0.85;
 }
 
-/* Додаткові елементи для другої хмари */
-.header__sky::after::after {
-    content: "";
-    position: absolute;
-    top: -15px;
-    left: 20px;
-    width: 80px;
-    height: 50px;
-    background: #f0f0f0;
-    border-radius: 50px;
-    box-shadow: 0 0 15px rgba(240, 240, 240, 0.5);
-}
-
-/* Третя хмара (сіра, складна форма) */
 .header__cloud {
     position: absolute;
     top: 20px;
@@ -126,7 +96,6 @@ body {
     opacity: 0.8;
 }
 
-/* Додаткові елементи для третьої хмари */
 .header__cloud::before {
     content: "";
     position: absolute;
@@ -144,17 +113,20 @@ body {
     /* Явна висота для розміщення автомобіля та дороги */
     position: relative;
     /* Контекст для абсолютного позиціонування дочірніх елементів */
+    perspective: 1200px;
+    transform-style: preserve-3d;
 }
 
 .car {
+    --car-size: min(90vw, 500px);
+    width: var(--car-size);
+    height: var(--car-size);
     position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        /* Центрування */
-        width: 500px;
-        height: 500px;
-        max-height: 80vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    will-change: transform;
+    animation: drive 3s ease-in-out infinite;
 }
 
 .car__circle-bg {
@@ -176,7 +148,7 @@ body {
         linear-gradient(to bottom, crimson 5%, transparent 40%);
     background-blend-mode: overlay;
     z-index: -1;
-    overflow: visible !important;
+    overflow: visible;
     animation: sun-pulse 3s ease-in-out infinite;
 }
 
@@ -223,18 +195,12 @@ body {
 
 .car__main-body {
     position: absolute;
+    inset: 0;
     margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 500px;
-    height: 150px;
+    width: 100%;
+    height: 30%;
     background: #f1edde;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 60px;
+    border-radius: 8% 8% 12% 12%;
     overflow: hidden;
     z-index: 3;
 }
@@ -482,16 +448,20 @@ body {
     background: #303030;
     overflow: hidden;
     z-index: 1;
+    animation: wheel-vibration 1.2s ease-in-out infinite;
 }
 
 .car__wheel::before {
     content: "";
     position: absolute;
-    margin: auto;
-    bottom: 0;
-    width: 80px;
-    height: 5px;
-    background: #252525;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle, #444 10%, transparent 15%, #444 20%, transparent 25%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: wheel-spin-front 0.5s linear infinite;
 }
 
 .car__wheel--left {
@@ -594,11 +564,11 @@ body {
 }
 
 .car__decor-tree-styled--left {
-    left: -260px;
+    left: -220px;
 }
 
 .car__decor-tree-styled--right {
-    right: -260px;
+    right: -200px;
     animation-delay: 2s;
 }
 
@@ -645,16 +615,20 @@ body {
 
 @keyframes move-dash-vertical {
     0% {
-        transform: translateX(-50%) translateY(0);
+        transform: translateX(-50%) translateY(-100px);
+        opacity: 0;
+    }
+
+    10% {
         opacity: 1;
     }
 
-    50% {
-        opacity: 0.7;
+    90% {
+        opacity: 1;
     }
 
     100% {
-        transform: translateX(-50%) translateY(500px);
+        transform: translateX(-50%) translateY(600px);
         opacity: 0;
     }
 }
@@ -682,6 +656,7 @@ body {
     border-radius: 10px;
     background: #5c4b51;
     z-index: 0;
+    animation: road-move 2s linear infinite;
 }
 
 .footer {
@@ -702,7 +677,7 @@ body {
 
 .footer__copy p {
     font-weight: 500;
-    color:rgba(0, 0, 0, 0.266);;
+    color:rgba(0, 0, 0, 0.266);
 }
 
 .footer__link {
@@ -724,11 +699,6 @@ body {
 .footer__link:hover::after {
     width: 100%;
 }
-
-.car {
-    animation: drive 3s ease-in-out infinite;
-}
-
 
 .car__headlight--left,
 .car__headlight--right {
@@ -808,40 +778,6 @@ body {
     }
 }
 
-.car__wheel {
-    position: absolute;
-    margin: auto;
-    bottom: 140px;
-    height: 100px;
-    width: 70px;
-    border-radius: 15px;
-    background: #303030;
-    overflow: hidden;
-    z-index: 1;
-    animation: wheel-vibration 1.2s ease-in-out infinite;
-}
-
-.car__wheel--left {
-    left: 0;
-}
-
-.car__wheel--right {
-    right: 0;
-}
-
-.car__wheel::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 50px;
-    height: 50px;
-    background: radial-gradient(circle, #444 10%, transparent 15%, #444 20%, transparent 25%);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    animation: wheel-spin-front 0.5s linear infinite;
-}
-
 .car__wheel::after {
     content: "";
     position: absolute;
@@ -884,10 +820,6 @@ body {
     }
 }
 
-.road__line {
-    animation: road-move 2s linear infinite;
-}
-
 .header__sky::before {
     animation: cloud-drift 12s linear infinite;
 }
@@ -898,14 +830,6 @@ body {
 
 .header__cloud {
     animation: cloud-drift-third 10s linear infinite;
-}
-
-.header__sky::before::after {
-    animation: cloud-drift-detail 12s linear infinite;
-}
-
-.header__sky::after::after {
-    animation: cloud-drift-detail-alt 14s linear infinite;
 }
 
 .header__cloud::before {
@@ -1097,8 +1021,8 @@ body {
 .bird {
     position: absolute;
     top: 50%;
-    left: 0;
-    width: 500px;
+    left: -200px;
+    width: min(500px, 90vw);
     margin: 0;
     transform: translateY(-50%);
     animation: fly-complex 12s cubic-bezier(0.4, 0, 0.6, 1) infinite;
@@ -1484,17 +1408,15 @@ body {
 .building--left {
     left: -8%;
     height: 350px;
-    transform:
-        translateZ(-350px) rotateY(18deg) scale(0.72);
-    animation-delay: 0s;
+    transform: translateZ(-250px) rotateY(18deg) scale(0.72);
+    animation: sway-left 7s ease-in-out infinite;
 }
 
 .building--right {
     right: -5%;
     height: 300px;
-    transform:
-        translateZ(-220px) rotateY(-15deg) scale(0.88);
-    animation-delay: 3.5s;
+    transform: translateZ(-220px) rotateY(-15deg) scale(0.88);
+    animation: sway-right 7s ease-in-out infinite reverse;
 }
 
 .building__windows {
@@ -1570,23 +1492,19 @@ body {
 }
 
 
-@keyframes sway-building {
+@keyframes sway-left {
 
     0%,
     100% {
-        transform: translateZ(-250px) rotateY(18deg) scale(0.92) translateX(0);
+        transform: translateZ(-250px) rotateY(18deg) scale(0.72) translateX(0);
     }
 
     50% {
-        transform: translateZ(-250px) rotateY(20deg) scale(0.93) translateX(8px);
+        transform: translateZ(-250px) rotateY(20deg) scale(0.73) translateX(8px);
     }
 }
 
-.building--right {
-    animation-name: sway-building-right;
-}
-
-@keyframes sway-building-right {
+@keyframes sway-right {
 
     0%,
     100% {
