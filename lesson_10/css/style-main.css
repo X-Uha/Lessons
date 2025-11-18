@@ -585,7 +585,6 @@ span {
     border-color: transparent;
 }
 
-/* ===================================================================== */
 
 .list {
     margin: 0 auto;
@@ -597,7 +596,6 @@ span {
     font-size: 14px;
     font-weight: 600;
     line-height: 1.71;
-    /* 24/14 */
     letter-spacing: 0.2px;
 }
 
@@ -635,7 +633,6 @@ span {
     margin-bottom: 15px;
 }
 
-/* =========================================================== */
 
 .footer {
     text-align: center;
@@ -672,7 +669,7 @@ span {
 .footer__title {
     font-size: 25px;
     font-weight: 800;
-    color: rgba(0, 0, 0, 0.746);
+    color: rgba(169, 169, 169, 0.929)
 }
 
 .footer__button {
