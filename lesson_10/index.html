@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Playfair%20Display:wght@400;700&display=swap"
+			rel="stylesheet">
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
+			rel="stylesheet">
+		<link rel="stylesheet" href="css/style-main.css">
+		<title>Lesson 10</title>
+	</head>
+	<body id="top">
+		<div class="wrapper">
+			<header class="header header--margin">
+				<div class="header__container">
+					<h1 class="header__title">
+						CSS position property
+					</h1>
+					<div class="header__menu menu">
+						<div class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item">
+									<a href="#" class="menu__link">Practice</a>
+									<ul class="menu__sub-menu sub-menu">
+										<li class="sub-menu__item">
+											<a href="#section1" class="sub-menu__link">Relative</a>
+										</li>
+										<li class="sub-menu__item">
+											<a href="#section2" class="sub-menu__link">Absolute</a>
+										</li>
+										<li class="sub-menu__item">
+											<a href="#section3" class="sub-menu__link">Fixed</a>
+										</li>
+										<li class="sub-menu__item">
+											<a href="#section4" class="sub-menu__link">Sticky</a>
+										</li>
+									</ul>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">Homework</a>
+									<ul class="menu__sub-menu sub-menu">
+										<li class="sub-menu__item sub-menu__item">
+											<a href="#section5" class="sub-menu__link">Cards</a>
+										</li>
+										<li class="sub-menu__item sub-menu__item">
+											<a href="#section6" class="sub-menu__link">List</a>
+										</li>
+										<li class="sub-menu__item sub-menu__item">
+											<a href="#" class="sub-menu__link">Contacts</a>
+											<ul class="sub-menu__contacts-menu contacts-menu">
+												<li class="contacts-menu__item">
+													<a target="_blank" title="Twitter official website"
+														href="https://www.x.com/"
+														class="contacts-menu__link contacts-menu__link--twitter">Twitter</a>
+												</li>
+												<li class="contacts-menu__item">
+													<a target="_blank" title="Etsy official website"
+														href="https://www.etsy.com/"
+														class="contacts-menu__link contacts-menu__link--etsy">Etsy</a>
+												</li>
+												<li class="contacts-menu__item">
+													<a target="_blank" title="Upwork official website"
+														href="https://www.upwork.com/"
+														class="contacts-menu__link contacts-menu__link--upwork">Upwork</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</header>
+			<main class="page">
+				<div class="practice">
+					<div class="practice__container">
+						<div class="practice__relative relative">
+							<h2 id="section1" class="relative__title title">
+								Relative
+							</h2>
+							<div class="relative__buttons">
+								<a href="#position1" id="position1" class="relative__target">top: 20px;
+									left: 40
+									px</a>
+								<a href="#position2" id="position2" class="relative__target">bottom:
+									10px; right:
+									15
+									px</a>
+								<a href="#position3" id="position3" class="relative__target">top: -15px;
+									left:
+									-4%</a>
+								<a href="#position4" id="position4" class="relative__target">z-index</a>
+								<a href="#position5" id="position5" class="relative__target">statick</a>
+							</div>
+							<div class="relative__items">
+								<div class="relative__block relative__block--brown">1</div>
+								<div class="relative__block relative__block--green">2</div>
+								<div class="relative__block relative__block--orange">3</div>
+							</div>
+						</div>
+						<div class="practice__absolute absolute">
+							<h2 id="section2" class="absolute__title title">
+								Absolute
+							</h2>
+							<div class="absolute__items">
+								<div class="absolute__block absolute__block--darkcyan">Absolute</div>
+								<div
+									class="absolute__block absolute__block--red">Absolute</div>
+								<div class="absolute__block absolute__block--blue">Absolute <br>
+									z-index 2</div>
+								<div class="absolute__block absolute__block--green">Absolute <br>
+									z-index 3</div>
+								<div class="absolute__block absolute__block--golden">Absolute <br>
+									z-index 4</div>
+								<div class="absolute__block absolute__block--yellow">Absolute <br>
+									z-index 5</div>
+								<div class="absolute__block absolute__block--orange">Absolute z-index
+									auto</div>
+								<div class="absolute__block absolute__block--grey">Absolute z-index
+									auto (lower in code)</div>
+
+							</div>
+						</div>
+						<div class="practice__sticky sticky">
+							<h2 id="section4" class="sticky__title title">
+								Sticky
+							</h2>
+							<div class="sticky__items">
+								<div class="sticky__block">Progressive Metal</div>
+								<div class="sticky__content">
+									<p>
+										The origins of progressive metal can be traced back to progressive
+										rock bands from the late 1960s and early to mid-1970s such as Yes,
+										Pink Floyd, Emerson, Lake and Palmer, Jethro Tull, King Crimson,
+										Genesis, Gentle Giant, Focus, early Queen, Kansas, Atomic Rooster,
+										Uriah Heep, and Rush. The latter 5 also often blended metal elements
+										into their music. However, progressive metal did not develop into a
+										genre of its own until the mid-1980s. Bands such as Rainbow had many
+										qualities of progressive metal. Bands such as Fates Warning,
+										Queensrÿche and Dream Theater took elements of these progressive rock
+										groups – primarily the instrumentation and compositional structure of
+										songs – and merged them with heavy metal styles associated with early
+										Metallica and Megadeth. The result could be described as a progressive
+										rock mentality with heavy metal sounds.
+
+										Progressive metal received mainstream exposure in the early 1990s when
+										Queensrÿche's "Silent Lucidity" (from 1990's Empire) became a radio
+										and MTV hit. It was not a typical progressive metal song, but its
+										popularity increased the profile of other progressive metal bands. In
+										1993, Dream Theater's "Pull Me Under" (from 1992's Images and Words)
+										became popular on radio and MTV. In the 1990s, bands such as Pain of
+										Salvation, Opeth, Ayreon, and Symphony X developed their own signature
+										sounds.
+
+										Pain of Salvation drew heavily on more obscure 1970s prog acts. Ayreon
+										stayed with the traditional Prog Metal themes, but mixed them with
+										rock opera influences. Symphony X married progressive elements to
+										power metal, bridging the gap between the two sub-genres. Steve Vai's
+										former singer and heavy metal band Strapping Young Lad's singer and
+										guitarist Devin Townsend combined elements of post metal and ambient
+										with traditional progressive metal on his first two solo albums Ocean
+										Machine: Biomech and Infinity. Opeth combined their prog influence
+										with death metal. Another influence on prog metal was
+										"technical metal" bands, such as Meshuggah, Watchtower, Between The
+										Buried and Me, Last Chance to Reason, Suraj SYnthesist, Atheist and
+										Cynic, which played complex song structures and used virtuoso
+										instrumental playing.
+
+										Bands like Sun Caged, Dominici and Circus Maximus are influenced by
+										traditional progressive metal and several of the first wave of 1990s
+										bands. Bands such as Dark Suns, Disillusion, or Conscience are
+										influenced by emotional progressive metal bands like Opeth, Pain of
+										Salvation, Green Carnation and Anathema. Sweden's Tiamat have also
+										been influential in the progressive metal genre, especially on their
+										1994's breakthrough-album Wildhoney.
+									</p>
+								</div>
+								<div class="sticky__block">Djent</div>
+								<div class="sticky__content">
+									<p>
+										Djent (pronounced “gent”) is an umbrella term for a subgenre of heavy
+										metal music and a style of progressive metal identifiable by its
+										repetitive power chords, unusual time signatures, and the use of
+										polyrhythms, or two different and contrasting rhythms within the same
+										musical composition. The term “djent” is an onomatopoeia credited to
+										Fredrik Thordendal, guitarist for the Swedish extreme metal band
+										Meshuggah. Frederik reportedly used the term to describe the band’s
+										guitar sound: crunching, four-note riffs marked by high gain—a
+										distorted, “dirty” guitar tone—and palm-muting, in which the
+										guitarist’s strumming hand lightly touches the strings to deaden the
+										tone and lend weight or “chug” to their sound.
+
+										Djent began trending with an online community of musicians and soon
+										came to describe a style of music that embraced several metal
+										subgenres—including metalcore and iterations of math metal like
+										mathcore—and utilized complicated rhythms and heavy riffs. Guitarist
+										Misha Mansoor, a.k.a. Bulb, of the prog metal band Periphery, has
+										received credit for uniting these groups under the rubric of djent
+										metal. Critics and fans alike consider Animals as Leaders, Tesseract,
+										Textures, and Sikth to be foundational groups of the djent scene.
+
+										The djent sound has attracted numerous other musicians and bands,
+										including Paul Antonio Ortiz (who also performs under the pseudonym
+										Chimp Spanner) and Monuments. Several prog metal and metal bands, like
+										Veil of Maya, Xerath, and Vildhjarta, have folded “djenty” elements
+										into their music. Deathcore and progressive death metal acts, such as
+										Born of Osiris, also use elements of the sound along with nu-metal
+										bands like Hacktivist, who merge djent metal with rapping.
+
+										Several characteristics define djent music, including:
+
+										1. Chug: The term “djent” is a nod to the high-gain, low-pitch,
+										palm-muted guitar “chug” of extreme heavy metal and other metal
+										genres. Djent guitarists like Acle Kahney of Tesseract often wield
+										exceptional technicality in playing but boost the gain on their amp or
+										employ guitar processors to reproduce the dissonant djent sound.
+										Sweden’s proto-djent band Meshuggah played eight-string guitars to add
+										crushing layers of chug to their music.
+										2. Polyrhythm: The use of two contrasting rhythms within the same
+										song, or polyrhythm, is an earmark of djent music. While some African,
+										Latin, and classical music styles also utilize polyrhythms, djent
+										music uses them to lend a groove and beat to their heavy and
+										technically complex sound.
+										3. Prog metal roots: Djent shares many of the elements that define
+										prog metal. Both subgenres use extended solos, syncopated rhythms,
+										repetitive riffs, unique melody structures, and time signatures. Djent
+										and prog metal also echo various influences, from jazz fusion and
+										ambient sounds to hardcore, thrash, and black metal.
+										4 Popular Djent Bands
+										Here are some of the most notable djent bands:
+
+										1. After the Burial: The Minneapolis, Minnesota–based prog metal band
+										After the Burial has managed to issue six full-length albums despite
+										incredible upheaval during their 17-year history, including the death
+										of co-founder and rhythm guitarist Justin Lowe and numerous band
+										roster changes.
+										2. Cloudkicker: Commercial airline pilot Ben Sharp is the sole
+										architect behind the post-metal/prog metal band Cloudkicker. He
+										composes, engineers, and records all the music himself. Though he has
+										professed a dislike for touring, the Ohio-based Ben hit the road with
+										fellow djent band Tesseract in 2014.
+										3. ERRA: Birmingham, Alabama’s ERRA mixes metalcore and progressive
+										metal with elements of melodic and ambient sounds for their signature
+										sonic attack. They wield considerable influence over the metalcore and
+										prog metal scenes through five albums and frequent touring with other
+										djent groups.
+										4. Periphery: The Grammy-nominated band Periphery is one of the
+										founding acts of the djent movement, with guitarist Misha Mansoor
+										serving as one of the primary architects of developing the loose
+										tenets of the djent sound. The band has forged connections with other
+										djent groups, including Tesseract, The Safety Fire, and Monuments.
+										They traveled the country with Tesseract and Monument on the League of
+										Extraordinary Djentlemen tour to promote their self-titled debut album
+										in 2014.
+									</p>
+								</div>
+								<div class="sticky__block">Tech/Extreme Prog Metal</div>
+								<div class="sticky__content">
+									<p>
+										This category lists technical Progressive Metal bands that have roots
+										in Extreme Metal or that are strongly influenced by it. The style
+										developed by the end of the 80s in the Thrash Metal scene when a
+										number of bands stretched the boundaries of their sound by including
+										elements from Progressive Rock. Death Metal followed a similar path in
+										the 90s and by the 2000s, also Black Metal and Metalcore saw an
+										increasing amount of bands taking in Prog influences.
+
+										Certain bands like EPHEL DUATH and UNEXPECT developed a style that
+										largely abandoned their extreme metal heritage in favour of a highly
+										eclectic jazz-influenced Avant Metal style. These bands are listed
+										under Experimental Metal.
+
+										Progressive Thrash Metal
+										By the end of the 80s Thrash Metal had diversified its sound
+										significantly to an extent where the originally very direct and
+										uncompromisingly aggressive style had become more sophisticated,
+										boasting challenging technical skills and ambitious song structures
+										frequently surpassing the 6 minute mark. The best known examples are
+										METALLICA and MEGADETH.
+
+										The bands listed in this section went one step further and embraced
+										notable influences from Progressive Rock, replacing much of the
+										typical Thrash Metal riffs and rhythms with a more progressive and
+										melodic riffing style, influenced by KING CRIMSON and RUSH. The most
+										well-known of these early bands was VOIVOD, who also brought the early
+										psychedelic sound of PINK FLOYD into their unique mold. Important
+										pioneering albums were released by WATCHTOWER, CORONER, MEKONG DELTA,
+										as well as the debut album of SIEGES SEVEN.
+										More recent examples of Progressive Thrash are SPIRAL ARCHITECT and
+										VEKTOR
+
+										Progressive Death Metal
+										Death Metal further built on the sound of the most extreme bands of
+										the Thrash scene. Next to the brutal sound, blast beat drumming,
+										complex song structures and multiple tempo changes, the most notorious
+										feature of the style is probably the growled vocals. Death Metal is
+										generally highly technical, making the dividing line between Technical
+										Death Metal and Progressive Death Metal sometimes rather faint.
+
+										The bands considered for Prog Archives are those that show significant
+										influences from Progressive Rock and/or Fusion. One of the landmarks
+										in the style is "Elements" from ATHEIST, who mixed their
+										hyper-technical Speed Metal with fusion. Other early albums include
+										"Focus" from CYNIC and "Spheres" from PESTILENCE, where progressive
+										riffing, polymetrics, fusion influences and atmospheric keyboards
+										complemented their brutal Death Metal. Also DEATH, the popular founder
+										of Death Metal, incorporated fusion and progressive elements on their
+										later albums.
+
+										A different flavour of Progressive Death Metal came from the European
+										continent, when half-way into the 90s leading death and doom-death
+										bands started expanding their basic metal sound. The most significant
+										album relevant to this section is "Crimson" from EDGE OF SANITY. In
+										typical Scandinavian fashion, their epic approach wasn't fusion
+										oriented but less technical and more melodic, introducing the now
+										typical alteration between brutal Death sections and more melodic
+										breaks with clean vocals; an approach perfected in the next decade by
+										OPETH.
+
+										Progressive Black Metal
+										Unlike Thrash and Death metal, Black Metal is not a technical genre.
+										Originally it was even purposely non-technical and low-fi. By the end
+										of the 90s the genre had developed into various sub-styles, of which
+										some incorporated elements from progressive music.
+										The bands listed in this section are Black Metal bands that traded the
+										minimalism of Black Metal for a more progressive, technical or
+										experimental approach. This distinguishes them from the Black Metal
+										bands that fleshed out their sound with either post-rock and/or
+										shoegaze influences. Those are listed under Experimental/Post Metal.
+
+										One of the earliest and best known example of this style is ENSLAVED,
+										who maintained the harsh atmosphere and aggression of classic Black
+										Metal but extended this with a more textured psychedelic sound,
+										chromatic riffing and odd time-signatures, citing influences from PINK
+										FLOYD, VOIVOD and KING CRIMSON. Also IHSAHN, front-man of EMPEROR,
+										should be mentioned here.
+
+										Most artists in this section are Symphonic Black Metal-oriented bands
+										with progressive and experimental influences, but without fully
+										crossing over to either Prog or Avant Metal as they remain
+										oppressively dark, harsh, often dissonant and inaccessible. Their
+										strong ties to Black Metal is why they are featured under Tech/Extreme
+										Prog Metal and not in Avant Prog Metal. Examples are DEATHSPELL OMEGA,
+										MOONSORROW, NEGURA BUNGET and the slightly more accessible theatrical
+										Symphonic Black Metal of ARCTURUS.
+
+										Modern Phase
+										In the 2000s trends became more diffuse, introducing bands that had
+										some of their stylistic features in common with the extreme metal
+										genres without fully belonging in any of them. Some of them continued
+										the strong fusion element and hyper-technical approach from ATHEIST
+										and CYNIC. Instrumental acts such a as EXIVIOUS, CANVAS SOLARIS and
+										BLOTTED SCIENCE received lots of critical acclaim from progressive
+										metal fans.
+
+										A new trend was set by MESHUGGAH, one of the most defining bands of
+										this era. At the end of the 90s their eclectic mix of Death, Thrash,
+										Avant, Fusion and Prog laid down the groundrules of Extreme Metal for
+										the next decade. Another well known band to take a similar eclectic
+										approach to Extreme Metal was GOJIRA.
+										In the second half of the 2000's, many young bands copied MESHUGGAH's
+										guitar tone and rhythmical riffing style, giving rise to the so-called
+										'djent' movement. Many of these bands belong in Tech/Extreme, such as
+										ANIMALS AS LEADERS, CHIMP SPANNER etc.
+
+										Progressive Metalcore
+										The second half of the 2000s also saw the rise of a new generation of
+										Progressive Tech/Extreme acts with roots that lay in Metalcore,
+										Mathcore and Technical Sludge, rather then the 'classic' Extreme Metal
+										genres. Their music is inherently technical and complex and has quite
+										a number of formal features in common with Progressive Metal such as
+										odd time signatures and non-standard song formats.
+										Prog Archives only lists these bands that go beyond the default
+										expectations of the genre and bring in distinct non-extreme Prog
+										influences. Some of the most eye-catching bands in this area are
+										BETWEEN THE BURIED AND ME, PROTEST THE HERO, BURST, DILLINGER ESCAPE
+										PLAN and MASTODON.
+
+									</p>
+								</div>
+								<div class="sticky__block">Experimental Progressive Metal</div>
+								<div class="sticky__content">
+									<p>
+										Experimental progressive metal is a sub-genre of progressive metal
+										characterized by the incorporation of innovative, eclectic elements,
+										large-scale experimentation and the use of non-standard and
+										unconventional sounds, instruments, song structures, playing styles,
+										and vocal techniques. Experimentation in the music is a major criteria
+										to define the genre where artists often add unique elements to the
+										overall sound, while progressive metal usually has more focus on
+										traditional metal instrumentation and higher levels of technical
+										complexity.
+
+										It's nearly impossible to pinpoint the exact origin of Experimental
+										Progressive Metal since experimentation is common in all music genres.
+										Still it is clear that experimentation in the progressive metal
+										sub-genre has slowly but steadily grown in popularity ever since its
+										humble beginnings in the early 1980s.
+
+										Just like any other style, Experimental Progressive Metal has a few
+										defining moments that have changed the rules for its sub-genre for
+										years to come. Two of such moments are the releases of the debut album
+										by MR.BUNGLE of August 1991 and its iconic follow up "Disco Volante"
+										of 1995. MR BUNGLE became notorious for their heavy sound and mid-song
+										shifts of musical style. The band has later spawned an array of
+										established avant-garde side projects such as FANTÔMAS, SECRET CHIEFS
+										3 and ESTRADASPHERE but also inspired new Experimental Metal acts to
+										take the music scene to new heights.
+										Another crucial artist in the development of Experimental Progressive
+										Metal was the leading Avant Metal band of the 80s, CELTIC FROST. Their
+										eclectic mix of Thrash, Doom, Symphonic and Goth Metal created a dark
+										theatrical mystique that became a major influence among the
+										experimental Extreme Metal bands of the 90s such as MY DYING BRIDE,
+										ULVER, ARCTURUS among others. These bands served as an important
+										source of inspiration for the experimental movement within extreme
+										metal.
+
+										The bands listed under Experimental Progressive Metal have all, in
+										various degrees, shed their extreme heritage in favor of embracing
+										influences of the eclectic style going from art rock and ethnic up to
+										free-jazz and even modernist music.
+									</p>
+								</div>
+								<div class="sticky__block">Art Metal, Eclectic Metal, Avant-garde
+									Metal</div>
+								<div class="sticky__content">
+									<p>
+										Art metal is a direct continuation of progressive metal but with the
+										longing to expand the themes and styles of music while maintaining the
+										technical complexity of the sub-genre.
+										These bands are more artistic than their progressive metal peers and
+										tend to experiment, to a certain extent, but not as openly as the
+										bands of the eclectic and avant-garde metal styles. Art metal comes in
+										many shapes and forms. The virtuosity and complete unpredictability of
+										DEVIN TOWNSEND, OSI and TOOL always manages to draw attention of both
+										fans of traditional metal as well as the progressive music audience,
+										while bands like ANATHEMA, DEADSOUL TRIBE and GORDIAN KNOT attract
+										many fans of groove and atmospheric music into their vibrant
+										soundscapes. Other notable acts include GREEN CARNATION, DARK SUNS and
+										ANTIMATTER.
+
+										These bands often add unconventional elements to their metal sound,
+										whether it's experiments with various new sounds and styles that are
+										otherwise uncommon in metal or by blending many styles, with metal
+										being the referential core. Whether it's the ethnic elements of
+										ORPHANED LAND's music that combines Middle Eastern folklore with the
+										more traditional progressive metal sound or a completely unique mix of
+										atmospheric, almost ambient, elements fused with metal that can be
+										found in the sound of THE GATHERING, eclectic metal artists will
+										always certainly bring a host of different styles and ideas to the
+										table. Experimental metal can be found in numerous forms while
+										featuring notable acts like INDUKTI, IN THE WOODS... and MAUDLIN OF
+										THE WELL.
+
+										This style is generally considered to be more extreme in both its
+										arrangements but most importantly extremely complex and unpredictable
+										song structures. Compositions have the ambition of trying to breach
+										boundaries of music and generally have significant experimental
+										approaches to metal music. Most of this music borders on the realms of
+										pure avant-garde while still maintaining a solid foundation in metal
+										with technical instrumental prowess. Notable acts include UNEXPECT,
+										EPHEL DUATH and VIRUS.
+
+									</p>
+								</div>
+								<div class="sticky__block">Post Metal</div>
+								<div class="sticky__content">
+									<p>
+										Post metal arose following the subsequent emergence of numerous newer,
+										grittier metal genres like sludge, stoner, doom, and drone in the late
+										80's and early 90's, as well as the budding post-rock scene that
+										emerged in the early 90's in Europe and North America. The scene's
+										origins can be heard in several distinctly like-minded, moderately
+										experimental groups in the early 90's, ranging from the noisy grind of
+										GODFLESH, the sludgy, melodic, sometimes punk-like riffs of the
+										MELVINS, and the proggy time signatures and grungy riffing of TOOL or
+										HELMET, to the textural work of DON CABALLERO and the more melodic
+										moments of early BARK PSYCHOSIS.
+
+										Arguably the first true and definitive realizations of post-metal
+										emerged in the mid 1990's. The most concrete example was NEUROSIS, who
+										moved farther away from their crust-punk origins and into more
+										atmospheric territories with releases like Souls at Zero and Through
+										Silver in Blood, the latter album in particular being regarded as one
+										of the most definitive releases in the genre even to this day for its
+										revolutionary blend of dark, spanning atmosphere and massively heavy
+										sludge, something that would later come to define the post-metal genre
+										as a whole (indeed, post-metal is often called "atmospheric sludge" as
+										well). It wouldn't be until the early 2000's, however, that the
+										genre's capacity would be fully realized, with releases like ISIS's
+										"Oceanic", CULT OF LUNA's "Salvation", and PELICAN's "Australasia"
+										paving the way for a true scene to emerge, and post-metal has since
+										become a widespread phenomenon that has captivated the attention of
+										many adventurous listeners worldwide.
+
+										Post-metal's unique sound is often very long and extremely drawn-out,
+										utilizing oft-repetitive and simple riffs and guitar texturing to
+										create massive buildups and musical climaxes. At times very
+										emotionally evocative, it can be equally soft and soothing as it can
+										be massively dense and crushing. Vocals are used sparingly, if at all
+										(instrumental post-metal is a popular genre, with groups like PELICAN
+										and RUSSIAN CIRCLES even achieving some degree of mainstream
+										credibility), and when they are, they're usually gruff and barked as
+										opposed to growled or screamed, a signature trait of the genre's
+										hardcore roots.
+
+										While it should be noted that many post-metal bands have their roots
+										in sludge metal, there are many post-metal bands that are rooted in
+										other genres of metal. While post-sludge was an almost uniquely
+										American phenomenon, a number of European doom-influenced post-metal
+										bands have risen to fame, namely groups like ANATHEMA, YEAR OF NO
+										LIGHT and CALLISTO; their slow-churning riffs and depressing mood of
+										doom metal fit very well into the post-metal formula. These groups
+										later gave way to more western post-doom-metal projects like JESU,
+										GIANT SQUID, and MINSK.
+
+										A number of post-metal bands are significantly influenced by hardcore
+										and post-hardcore, crafting the melodic elements of modern hardcore
+										into their own brands of textural and atmospheric post-metal. This is
+										exemplified by groups like ROSETTA, THE OCEAN COLLECTIVE, CAVE IN,
+										MOUTH OF THE ARCHITECT and BURST.
+
+										A subgenre that has emerged to a considerable degree in the last
+										decade is an amalgamation of post-rock and black metal. Black metal
+										has traditionally not been a stylistic influence on post-metal over
+										the years, but bands like ALCEST, FEN, AGALLOCH and ALTAR OF PLAGUES
+										have used the more atmospheric qualities of black metal and the
+										tremolo riffing and incorporated it with a shoegaze-like affinity for
+										heavy, dreamy sounds and guitar effects to create a unique and
+										evocative subgenre that shares many visional and sonic characteristics
+										of post-metal. While the explosion of bands exploring this style is a
+										rather recent phenomenon, there are some instances of this occurring
+										very early in the lifespan of the post-metal genre as a whole. ULVER's
+										debut could be seen as possibly the first album to fall under this
+										definition. For clarification's sake, these post-rock influenced bands
+										are placed in the post-metal subsection of ProgArchives as opposed to
+										the black metal subsection of Tech/Extreme because they eschew much of
+										the harsh tonalities, minor modes, and shrieking vocals of black metal
+										and add a melodic and emotional aspect that makes it much more
+										accessible than their progressive black metal peers in the
+										tech/extreme section.
+
+										Today, the most popular post-metal groups are much of the genre's
+										godfathers like ISIS, NEUROSIS, PELICAN, and CULT OF LUNA, though a
+										number of newer bands have risen to fame in metal and prog circles
+										within the last 5 years like INTRONAUT, ROSETTA, and THE OCEAN
+										COLLECTIVE.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="practice__fixed fixed">
+							<div id="section3" class="fixed__block">
+								fixed
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="homework">
+					<div class="homework__container face">
+						<h2 id="section5" class="face__main-title main-title">
+							Face
+						</h2>
+						<div class="face__items">
+							<div class="face__item">
+								<a href="#" class="face__link">
+									<picture>
+										<source
+											srcset="img/Cleanser.avif 1x, img/Cleanser_2x.avif 2x, img/Cleanser_3x.avif 3x"
+											type="image/avif">
+										<source
+											srcset="img/Cleanser.webp 1x, img/Cleanser_2x.webp 2x, img/Cleanser_3x.webp 3x"
+											type="image/webp">
+										<img src="img/Cleanser.jpg"
+											alt="A woman applying a face mask, enjoying her skincare routine"
+											class="face__image">
+									</picture>
+									<div class="face__content">
+										<h2 class="face__sub-title">
+											Cleansers
+										</h2>
+										<span>
+											More
+										</span>
+									</div>
+								</a>
+							</div>
+							<div class="face__item">
+								<a href="#" class="face__link">
+									<picture>
+										<source
+											srcset="img/eye-patches.avif 1x, img/eye-patches_2x.avif 2x, img/eye-patches_3x.avif 3x"
+											type="image/avif">
+										<source
+											srcset="img/eye-patches.webp 1x, img/eye-patches_2x.webp 2x, img/eye-patches_3x.webp 3x"
+											type="image/webp">
+										<img src="img/eye-patches.jpg"
+											alt="A woman with red cutly hair in a white-red shirt, featuring eye patches"
+											class="face__image">
+									</picture>
+									<div class="face__content">
+										<h2 class="face__sub-title">
+											Eye Patches
+										</h2>
+										<span>
+											More
+										</span>
+									</div>
+								</a>
+							</div>
+							<div class="face__item">
+								<a href="#" class="face__link">
+									<picture>
+										<source
+											srcset="img/mask.avif 1x, img/mask_2x.avif 2x, img/mask_3x.avif 3x"
+											type="image/avif">
+										<source
+											srcset="img/mask.webp 1x, img/mask_2x.webp 2x, img/mask_3x.webp 3x"
+											type="image/webp">
+										<img src="img/mask.jpg"
+											alt="A woman relaxing with a sheet mask on her face"
+											class="face__image">
+									</picture>
+									<div class="face__content">
+										<h2 class="face__sub-title">
+											Мasks
+										</h2>
+										<span>
+											More
+										</span>
+									</div>
+								</a>
+							</div>
+						</div>
+						<a href="#" class="face__button">More</a>
+						<div id="section6" class="list">
+							<ul class="list__items">
+								<li class="list__item">
+									Unlimited product updates
+								</li>
+								<li class="list__item">
+									Unlimited product
+								</li>
+								<li class="list__item">
+									Unlimited product
+								</li>
+								<li class="list__item list__item--unchecked">
+									1GB Cloud storage
+								</li>
+								<li class="list__item list__item--unchecked">
+									Email and community support
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</main>
+			<footer class="footer">
+				<div class="footer__container">
+					<h2 class="footer__title">
+						<a href="#top" class="footer__button">To top</a>
+					</h2>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
